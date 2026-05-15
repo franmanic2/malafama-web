@@ -1,42 +1,53 @@
-# malafama-web
+# MALAFAMA - Admin Web App
 
-This template should help get you started developing with Vue 3 in Vite.
+Sistema administrativo premium para local de Billar y Poker.
 
-## Recommended IDE Setup
+## Stack Tecnológico
+- **Vue.js 3** (Composition API)
+- **Vite**
+- **Pinia** (Manejo de estado)
+- **TailwindCSS** (Estilos y Animaciones)
+- **Lucide Icons**
+- **Chart.js** (Gráficas)
+- **JSON Server** (Base de datos local)
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Requisitos
+- Node.js (versión recomendada 20+)
+- npm
 
-## Recommended Browser Setup
+## Instalación
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+1. Instalar dependencias:
+   ```bash
+   npm install
+   ```
 
-## Type Support for `.vue` Imports in TS
+2. Ejecutar la base de datos (JSON Server):
+   ```bash
+   npm run server
+   ```
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+3. Ejecutar la aplicación en modo desarrollo:
+   ```bash
+   npm run dev
+   ```
 
-## Customize configuration
+## Acceso
+- **Usuario:** `admin`
+- **Contraseña:** `admin123`
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## Características
+- **Dashboard:** Resumen visual, ingresos/egresos y gráficas.
+- **Mesas:** Control de 4 mesas de billar y 3 de poker con cronómetro en tiempo real.
+- **Inventario:** CRUD de productos, alertas de stock bajo y registro de ventas.
+- **Finanzas:** Historial detallado de transacciones (Ingresos/Egresos).
+- **Deudas:** Gestión de deudas de clientes y pagos pendientes.
+- **Reportes:** Resumen por periodos y estadísticas de uso.
 
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
+## Estructura del Proyecto
+- `src/stores/`: Lógica de negocio y persistencia de estado.
+- `src/views/`: Pantallas principales del sistema.
+- `src/layouts/`: Estructura base (Sidebar, Topbar).
+- `src/components/`: Componentes reutilizables (TableCard, Modals).
+- `src/services/`: Capa de conexión con la API (Axios).
+- `src/styles/`: Configuración global de diseño y Tailwind.

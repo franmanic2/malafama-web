@@ -1,0 +1,3750 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "admin123",
+      "name": "Administrador"
+    }
+  ],
+  "tables": [
+    {
+      "id": "b1",
+      "name": "Mesa Billar 1",
+      "type": "billiard",
+      "status": "available",
+      "currentRentalId": null
+    },
+    {
+      "id": "b2",
+      "name": "Mesa Billar 2",
+      "type": "billiard",
+      "status": "available",
+      "currentRentalId": null
+    },
+    {
+      "id": "b3",
+      "name": "Mesa Billar 3",
+      "type": "billiard",
+      "status": "available",
+      "currentRentalId": null
+    },
+    {
+      "id": "b4",
+      "name": "Mesa Billar 4",
+      "type": "billiard",
+      "status": "available",
+      "currentRentalId": null
+    },
+    {
+      "id": "p1",
+      "name": "Mesa Poker 1",
+      "type": "poker",
+      "status": "available",
+      "currentRentalId": null
+    },
+    {
+      "id": "p2",
+      "name": "Mesa Poker 2",
+      "type": "poker",
+      "status": "available",
+      "currentRentalId": null
+    },
+    {
+      "id": "p3",
+      "name": "Mesa Poker 3",
+      "type": "poker",
+      "status": "available",
+      "currentRentalId": null
+    }
+  ],
+  "rentals": [
+    {
+      "id": "1778821236182",
+      "tableId": "b1",
+      "startTime": "2026-05-15T05:00:36.182Z",
+      "endTime": "2026-05-15T05:00:48.861Z",
+      "fixedHours": 1,
+      "totalAmount": 15,
+      "paymentMethod": "debt",
+      "status": "completed"
+    },
+    {
+      "id": "1778821391913",
+      "tableId": "b1",
+      "startTime": "2026-05-15T05:03:11.913Z",
+      "endTime": "2026-05-15T05:03:25.113Z",
+      "totalAmount": 0.05,
+      "paymentMethod": "debt",
+      "status": "completed"
+    }
+  ],
+  "inventory": [
+    {
+      "id": "1778820965638",
+      "name": "Cerveza Pilsen",
+      "category": "bebidas",
+      "stock": 99,
+      "minStock": 5,
+      "buyPrice": 6.5,
+      "sellPrice": 8,
+      "provider": "Pilsen"
+    }
+  ],
+  "inventoryMovements": [],
+  "finance": [
+    {
+      "id": "1778820874355kdg2ejii2",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 60.19,
+      "date": "2026-04-15T01:54:34.354Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 0"
+    },
+    {
+      "id": "1778820874355m9bl4bz0i",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 26.01,
+      "date": "2026-04-15T04:54:34.354Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 0"
+    },
+    {
+      "id": "1778820874355ofq6n1vax",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 15.64,
+      "date": "2026-04-15T00:54:34.354Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 0"
+    },
+    {
+      "id": "1778820874355nfw1qb8bk",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 31.44,
+      "date": "2026-04-14T22:54:34.354Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 0"
+    },
+    {
+      "id": "1778820874355e5swbxg4k",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 12,
+      "date": "2026-04-15T04:54:34.354Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x4"
+    },
+    {
+      "id": "1778820874355km5356cco",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 2.5,
+      "date": "2026-04-15T03:54:34.354Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x1"
+    },
+    {
+      "id": "1778820874355z55nfnx6o",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 5,
+      "date": "2026-04-15T02:54:34.354Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x2"
+    },
+    {
+      "id": "17788208743553d5g5v405",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 30.12,
+      "date": "2026-04-15T23:54:34.355Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 1"
+    },
+    {
+      "id": "17788208743552bhng8zlm",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 16.33,
+      "date": "2026-04-16T01:54:34.355Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 1"
+    },
+    {
+      "id": "17788208743558mwdp7c13",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 14.62,
+      "date": "2026-04-16T02:54:34.355Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 1"
+    },
+    {
+      "id": "1778820874355uo46ws6fr",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 32.35,
+      "date": "2026-04-15T19:54:34.355Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 1"
+    },
+    {
+      "id": "1778820874355dvcm2dpd3",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 20.31,
+      "date": "2026-04-15T20:54:34.355Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 1"
+    },
+    {
+      "id": "1778820874355hlf3y44ye",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 32.65,
+      "date": "2026-04-15T19:54:34.355Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 1"
+    },
+    {
+      "id": "1778820874355y9vw8h328",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 61.51,
+      "date": "2026-04-15T19:54:34.355Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 1"
+    },
+    {
+      "id": "1778820874355i9k1x50i1",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 7.5,
+      "date": "2026-04-15T19:54:34.355Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x3"
+    },
+    {
+      "id": "1778820874355jq2dvpgnx",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 5,
+      "date": "2026-04-16T02:54:34.355Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x2"
+    },
+    {
+      "id": "1778820874355qi04zffxq",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 107.57,
+      "date": "2026-04-17T04:54:34.355Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 2"
+    },
+    {
+      "id": "1778820874355k9sfrd9v7",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 31.57,
+      "date": "2026-04-16T19:54:34.355Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 2"
+    },
+    {
+      "id": "1778820874355fd8al9qdb",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 19.35,
+      "date": "2026-04-16T22:54:34.355Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 2"
+    },
+    {
+      "id": "1778820874355r444amxu8",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 181.82,
+      "date": "2026-04-17T03:54:34.355Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 2"
+    },
+    {
+      "id": "1778820874355mxkzk9fs8",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 3,
+      "date": "2026-04-17T01:54:34.355Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x1"
+    },
+    {
+      "id": "1778820874355pihs8muv4",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 5,
+      "date": "2026-04-16T23:54:34.355Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x2"
+    },
+    {
+      "id": "1778820874355l356lkm7v",
+      "type": "expense",
+      "category": "Servicios",
+      "amount": 134.52,
+      "date": "2026-04-17T04:54:34.355Z",
+      "paymentMethod": "cash",
+      "description": "Pago de luz/agua/mantenimiento"
+    },
+    {
+      "id": "1778820874355w61r3793v",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 49.9,
+      "date": "2026-04-18T01:54:34.355Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 3"
+    },
+    {
+      "id": "17788208743560t83ktbmw",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 23.83,
+      "date": "2026-04-17T21:54:34.355Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 3"
+    },
+    {
+      "id": "1778820874356hf706ernw",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 82.09,
+      "date": "2026-04-17T22:54:34.355Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 3"
+    },
+    {
+      "id": "177882087435670yah8a1p",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 36.99,
+      "date": "2026-04-18T00:54:34.355Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 3"
+    },
+    {
+      "id": "1778820874356licszxhle",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 151.3,
+      "date": "2026-04-17T20:54:34.355Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 3"
+    },
+    {
+      "id": "1778820874356rlgvp263r",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 29.99,
+      "date": "2026-04-17T19:54:34.355Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 3"
+    },
+    {
+      "id": "17788208743564onqip9fd",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 174.53,
+      "date": "2026-04-18T00:54:34.355Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 3"
+    },
+    {
+      "id": "1778820874356azde5g0fa",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 18.81,
+      "date": "2026-04-18T03:54:34.355Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 3"
+    },
+    {
+      "id": "177882087435614meug72f",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 13.75,
+      "date": "2026-04-18T00:54:34.355Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 3"
+    },
+    {
+      "id": "1778820874356jwxltij75",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 196.87,
+      "date": "2026-04-18T00:54:34.355Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 3"
+    },
+    {
+      "id": "1778820874356557xko8r8",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 14.15,
+      "date": "2026-04-18T02:54:34.355Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 3"
+    },
+    {
+      "id": "1778820874356g3tjteb5z",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 14.94,
+      "date": "2026-04-18T03:54:34.355Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 3"
+    },
+    {
+      "id": "1778820874356z62b4s864",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 37.49,
+      "date": "2026-04-18T00:54:34.355Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 3"
+    },
+    {
+      "id": "1778820874356nvvkuu8tt",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 84.75,
+      "date": "2026-04-17T23:54:34.355Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 3"
+    },
+    {
+      "id": "1778820874356yqqlr0mvm",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 18.63,
+      "date": "2026-04-18T03:54:34.355Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 3"
+    },
+    {
+      "id": "1778820874356g8ql16w4d",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 10.63,
+      "date": "2026-04-17T19:54:34.355Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 3"
+    },
+    {
+      "id": "17788208743564s3bhljqm",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 230.12,
+      "date": "2026-04-18T01:54:34.355Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 3"
+    },
+    {
+      "id": "1778820874356lbmst1pjc",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 26.39,
+      "date": "2026-04-17T22:54:34.355Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 3"
+    },
+    {
+      "id": "17788208743565okv70o66",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 5,
+      "date": "2026-04-17T23:54:34.355Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x2"
+    },
+    {
+      "id": "17788208743565af1a7w1x",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 7.5,
+      "date": "2026-04-18T03:54:34.355Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x3"
+    },
+    {
+      "id": "1778820874356teeiwidqs",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 7.5,
+      "date": "2026-04-18T02:54:34.355Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x3"
+    },
+    {
+      "id": "1778820874356xm0qm7hyi",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 12,
+      "date": "2026-04-18T00:54:34.355Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x4"
+    },
+    {
+      "id": "1778820874356bu2dyx2hs",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 3,
+      "date": "2026-04-17T21:54:34.355Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x1"
+    },
+    {
+      "id": "1778820874356cy1o8xi0s",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 10,
+      "date": "2026-04-17T22:54:34.355Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x4"
+    },
+    {
+      "id": "17788208743565cwcmycmt",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 9,
+      "date": "2026-04-17T19:54:34.355Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x3"
+    },
+    {
+      "id": "1778820874356ou11t4a0l",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 7.5,
+      "date": "2026-04-17T20:54:34.355Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x3"
+    },
+    {
+      "id": "1778820874356w5cws29zd",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 32.11,
+      "date": "2026-04-19T03:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 4"
+    },
+    {
+      "id": "1778820874356mbn7vlyax",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 36.51,
+      "date": "2026-04-18T19:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 4"
+    },
+    {
+      "id": "1778820874356m1d42pxu5",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 62.25,
+      "date": "2026-04-18T23:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 4"
+    },
+    {
+      "id": "1778820874356ajvt1u33b",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 11.85,
+      "date": "2026-04-18T21:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 4"
+    },
+    {
+      "id": "1778820874356ffang9yzr",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 24.84,
+      "date": "2026-04-19T03:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 4"
+    },
+    {
+      "id": "17788208743561as4cvk4y",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 23.04,
+      "date": "2026-04-19T00:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 4"
+    },
+    {
+      "id": "1778820874356mdblvbzuq",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 28.2,
+      "date": "2026-04-18T22:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 4"
+    },
+    {
+      "id": "1778820874356o5stc60f8",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 58.54,
+      "date": "2026-04-18T21:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 4"
+    },
+    {
+      "id": "17788208743566p03g7zxx",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 23.03,
+      "date": "2026-04-19T00:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 4"
+    },
+    {
+      "id": "1778820874356yyfq3dn4e",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 32.86,
+      "date": "2026-04-19T03:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 4"
+    },
+    {
+      "id": "1778820874356lvl7axe92",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 37.38,
+      "date": "2026-04-19T03:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 4"
+    },
+    {
+      "id": "1778820874356cxnx7j5n4",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 32.08,
+      "date": "2026-04-19T03:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 4"
+    },
+    {
+      "id": "1778820874356iy72tmpw9",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 140.54,
+      "date": "2026-04-19T01:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 4"
+    },
+    {
+      "id": "1778820874356xcfk9rph1",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 148.12,
+      "date": "2026-04-19T02:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 4"
+    },
+    {
+      "id": "1778820874356uee1n7h96",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 3,
+      "date": "2026-04-19T01:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x1"
+    },
+    {
+      "id": "1778820874356v1qvxw123",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 7.5,
+      "date": "2026-04-19T03:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x3"
+    },
+    {
+      "id": "1778820874356jkep5bdd5",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 6,
+      "date": "2026-04-18T21:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x2"
+    },
+    {
+      "id": "1778820874356fmyucyria",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 6,
+      "date": "2026-04-19T01:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x2"
+    },
+    {
+      "id": "17788208743564rq808z5m",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 9,
+      "date": "2026-04-19T02:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x3"
+    },
+    {
+      "id": "1778820874356mzv7ofmli",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 12,
+      "date": "2026-04-18T22:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x4"
+    },
+    {
+      "id": "1778820874356rkn9q3g5k",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 6,
+      "date": "2026-04-19T04:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x2"
+    },
+    {
+      "id": "1778820874356p915rzyj7",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 9,
+      "date": "2026-04-19T03:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x3"
+    },
+    {
+      "id": "17788208743569gwwo1ccd",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 6,
+      "date": "2026-04-18T21:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x2"
+    },
+    {
+      "id": "1778820874356mi20keea9",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 9,
+      "date": "2026-04-19T01:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x3"
+    },
+    {
+      "id": "1778820874356adi3qib7m",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 2.5,
+      "date": "2026-04-18T23:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x1"
+    },
+    {
+      "id": "1778820874356raym4fwyx",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 29.25,
+      "date": "2026-04-19T19:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 5"
+    },
+    {
+      "id": "1778820874356zuxnqmwls",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 14.64,
+      "date": "2026-04-20T00:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 5"
+    },
+    {
+      "id": "1778820874356ponn48oxk",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 22.75,
+      "date": "2026-04-19T22:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 5"
+    },
+    {
+      "id": "1778820874356jg1nu422j",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 31.39,
+      "date": "2026-04-19T23:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 5"
+    },
+    {
+      "id": "1778820874356g5eud7wlc",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 20.47,
+      "date": "2026-04-19T21:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 5"
+    },
+    {
+      "id": "1778820874356l18ba75wu",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 7.9,
+      "date": "2026-04-19T23:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 5"
+    },
+    {
+      "id": "177882087435667n7e83gx",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 48.62,
+      "date": "2026-04-19T19:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 5"
+    },
+    {
+      "id": "1778820874356d8r49jxtt",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 69.8,
+      "date": "2026-04-19T21:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 5"
+    },
+    {
+      "id": "17788208743560mzc4p1bs",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 71.07,
+      "date": "2026-04-20T02:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 5"
+    },
+    {
+      "id": "1778820874356ueg3lt5ub",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 36.14,
+      "date": "2026-04-20T02:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 5"
+    },
+    {
+      "id": "1778820874356crhscaxt3",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 36.97,
+      "date": "2026-04-20T03:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 5"
+    },
+    {
+      "id": "17788208743568vkea80ql",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 87.43,
+      "date": "2026-04-20T04:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 5"
+    },
+    {
+      "id": "1778820874356msd7ttwg9",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 217.37,
+      "date": "2026-04-20T04:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 5"
+    },
+    {
+      "id": "17788208743565dar1wsdr",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 57.48,
+      "date": "2026-04-19T21:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 5"
+    },
+    {
+      "id": "1778820874356722hy22f0",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 7.5,
+      "date": "2026-04-20T01:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x3"
+    },
+    {
+      "id": "17788208743561kiwcvhw4",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 10,
+      "date": "2026-04-20T00:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x4"
+    },
+    {
+      "id": "1778820874356gmo1gq2pa",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 9,
+      "date": "2026-04-20T04:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x3"
+    },
+    {
+      "id": "1778820874356jl51848e1",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 9,
+      "date": "2026-04-19T21:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x3"
+    },
+    {
+      "id": "1778820874356p5m4zybty",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 2.5,
+      "date": "2026-04-19T23:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x1"
+    },
+    {
+      "id": "1778820874356y4z05r77n",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 22.5,
+      "date": "2026-04-21T03:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 6"
+    },
+    {
+      "id": "17788208743563mrrkn7v7",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 34.82,
+      "date": "2026-04-21T04:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 6"
+    },
+    {
+      "id": "1778820874356u9yh8480x",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 34.59,
+      "date": "2026-04-21T02:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 6"
+    },
+    {
+      "id": "1778820874356in5ort9ht",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 20.91,
+      "date": "2026-04-21T00:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 6"
+    },
+    {
+      "id": "17788208743567ymhsq6yf",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 9,
+      "date": "2026-04-20T23:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x3"
+    },
+    {
+      "id": "1778820874356vdmi43a3d",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 5,
+      "date": "2026-04-21T02:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x2"
+    },
+    {
+      "id": "1778820874356szts219ig",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 33.06,
+      "date": "2026-04-22T02:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 7"
+    },
+    {
+      "id": "1778820874356jpsbvsfuf",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 17.66,
+      "date": "2026-04-22T04:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 7"
+    },
+    {
+      "id": "1778820874356uqvbb2mv9",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 149.14,
+      "date": "2026-04-21T22:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 7"
+    },
+    {
+      "id": "177882087435677mf38jdr",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 182.53,
+      "date": "2026-04-22T00:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 7"
+    },
+    {
+      "id": "177882087435659y3e52ql",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 12,
+      "date": "2026-04-22T02:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x4"
+    },
+    {
+      "id": "1778820874356k3k2ifcrg",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 2.5,
+      "date": "2026-04-21T19:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x1"
+    },
+    {
+      "id": "177882087435614pnzftbd",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 10.71,
+      "date": "2026-04-23T01:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 8"
+    },
+    {
+      "id": "17788208743563k0r4oh3t",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 10.17,
+      "date": "2026-04-22T19:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 8"
+    },
+    {
+      "id": "1778820874356ozudpoico",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 69.01,
+      "date": "2026-04-23T01:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 8"
+    },
+    {
+      "id": "1778820874356od11okr82",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 7.5,
+      "date": "2026-04-22T23:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x3"
+    },
+    {
+      "id": "1778820874356xtdblz9yt",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 8.08,
+      "date": "2026-04-24T01:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 9"
+    },
+    {
+      "id": "17788208743561js9icvf9",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 34.55,
+      "date": "2026-04-24T02:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 9"
+    },
+    {
+      "id": "1778820874356180ysxy73",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 33.32,
+      "date": "2026-04-23T19:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 9"
+    },
+    {
+      "id": "1778820874356mmucd0nha",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 30.79,
+      "date": "2026-04-24T04:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 9"
+    },
+    {
+      "id": "17788208743564vumjr7q0",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 39.12,
+      "date": "2026-04-23T19:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 9"
+    },
+    {
+      "id": "1778820874356qxynvuntq",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 9,
+      "date": "2026-04-24T01:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x3"
+    },
+    {
+      "id": "1778820874356k24hnd9li",
+      "type": "expense",
+      "category": "Servicios",
+      "amount": 138.26,
+      "date": "2026-04-24T04:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Pago de luz/agua/mantenimiento"
+    },
+    {
+      "id": "1778820874356rc2m6a7hl",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 34.1,
+      "date": "2026-04-24T23:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 10"
+    },
+    {
+      "id": "1778820874356ik0hp5sir",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 13.6,
+      "date": "2026-04-24T23:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 10"
+    },
+    {
+      "id": "1778820874356b83hauu7e",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 15.68,
+      "date": "2026-04-25T04:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 10"
+    },
+    {
+      "id": "1778820874356p7duljs0c",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 18.22,
+      "date": "2026-04-24T20:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 10"
+    },
+    {
+      "id": "1778820874356q8gzp0rd1",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 24.66,
+      "date": "2026-04-24T23:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 10"
+    },
+    {
+      "id": "1778820874356h6jul7slp",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 99,
+      "date": "2026-04-25T01:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 10"
+    },
+    {
+      "id": "1778820874356w7zb8ure4",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 36.77,
+      "date": "2026-04-24T21:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 10"
+    },
+    {
+      "id": "1778820874356yk0qlj6m9",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 35.29,
+      "date": "2026-04-24T19:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 10"
+    },
+    {
+      "id": "1778820874356rk90t0aaf",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 21.62,
+      "date": "2026-04-24T21:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 10"
+    },
+    {
+      "id": "17788208743566pt5qnbxa",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 26.46,
+      "date": "2026-04-24T19:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 10"
+    },
+    {
+      "id": "1778820874356lkp7w4xem",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 13.98,
+      "date": "2026-04-25T00:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 10"
+    },
+    {
+      "id": "17788208743566u5wb72by",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 9.21,
+      "date": "2026-04-25T01:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 10"
+    },
+    {
+      "id": "17788208743567ulwn7p4r",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 11.09,
+      "date": "2026-04-24T23:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 10"
+    },
+    {
+      "id": "1778820874356cngv1tsra",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 22.77,
+      "date": "2026-04-24T21:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 10"
+    },
+    {
+      "id": "1778820874356qkryvoytv",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 12,
+      "date": "2026-04-24T19:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x4"
+    },
+    {
+      "id": "1778820874356ks731tvc5",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 10,
+      "date": "2026-04-24T21:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x4"
+    },
+    {
+      "id": "1778820874356kjpffdyvp",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 5,
+      "date": "2026-04-25T04:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x2"
+    },
+    {
+      "id": "1778820874356tv0r1xuli",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 5,
+      "date": "2026-04-24T21:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x2"
+    },
+    {
+      "id": "1778820874356bsmonfbuj",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 9,
+      "date": "2026-04-25T03:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x3"
+    },
+    {
+      "id": "1778820874356n0yawjhps",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 12,
+      "date": "2026-04-24T21:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x4"
+    },
+    {
+      "id": "17788208743563u6jvq74x",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 5,
+      "date": "2026-04-25T03:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x2"
+    },
+    {
+      "id": "1778820874356sugw9bety",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 7.5,
+      "date": "2026-04-25T03:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x3"
+    },
+    {
+      "id": "1778820874356a1h6st33v",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 16.75,
+      "date": "2026-04-26T03:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 11"
+    },
+    {
+      "id": "1778820874356tv3g3g6pj",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 94.11,
+      "date": "2026-04-26T04:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 11"
+    },
+    {
+      "id": "177882087435615aym354m",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 32.96,
+      "date": "2026-04-25T20:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 11"
+    },
+    {
+      "id": "177882087435680dk1gqnx",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 120.52,
+      "date": "2026-04-26T04:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 11"
+    },
+    {
+      "id": "1778820874356ie98cltxa",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 7.51,
+      "date": "2026-04-26T04:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 11"
+    },
+    {
+      "id": "1778820874356ekbe64jyd",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 31.75,
+      "date": "2026-04-26T01:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 11"
+    },
+    {
+      "id": "1778820874356gntikmsin",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 51.62,
+      "date": "2026-04-25T23:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 11"
+    },
+    {
+      "id": "1778820874356jtjf7h9xo",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 31.46,
+      "date": "2026-04-26T02:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 11"
+    },
+    {
+      "id": "177882087435684j9oq3b9",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 25.28,
+      "date": "2026-04-25T21:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 11"
+    },
+    {
+      "id": "1778820874356f9rkose2c",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 18.71,
+      "date": "2026-04-26T01:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 11"
+    },
+    {
+      "id": "1778820874356axp1kfgza",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 9,
+      "date": "2026-04-25T22:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x3"
+    },
+    {
+      "id": "1778820874356ez5bshqq4",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 12,
+      "date": "2026-04-26T03:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x4"
+    },
+    {
+      "id": "17788208743568mr88k96w",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 6,
+      "date": "2026-04-25T22:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x2"
+    },
+    {
+      "id": "1778820874356znwvawx3r",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 2.5,
+      "date": "2026-04-26T02:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x1"
+    },
+    {
+      "id": "1778820874356ingvsj5so",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 5,
+      "date": "2026-04-25T22:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x2"
+    },
+    {
+      "id": "1778820874356wftl0ed19",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 6,
+      "date": "2026-04-26T02:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x2"
+    },
+    {
+      "id": "1778820874356cwdtenytj",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 2.5,
+      "date": "2026-04-26T00:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x1"
+    },
+    {
+      "id": "1778820874356wtlu6tfeu",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 10,
+      "date": "2026-04-26T03:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x4"
+    },
+    {
+      "id": "1778820874356pnz0gm27w",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 3,
+      "date": "2026-04-25T19:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x1"
+    },
+    {
+      "id": "1778820874356f8vzmzmak",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 3,
+      "date": "2026-04-25T19:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x1"
+    },
+    {
+      "id": "1778820874356e7ijbwlve",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 3,
+      "date": "2026-04-26T00:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x1"
+    },
+    {
+      "id": "17788208743568fgs8ka1b",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 7.5,
+      "date": "2026-04-25T20:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x3"
+    },
+    {
+      "id": "1778820874356dfm4acb32",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 46.99,
+      "date": "2026-04-26T21:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 12"
+    },
+    {
+      "id": "1778820874356p2q4mkri9",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 8.19,
+      "date": "2026-04-26T20:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 12"
+    },
+    {
+      "id": "1778820874356sdbd2ozh9",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 27.35,
+      "date": "2026-04-26T23:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 12"
+    },
+    {
+      "id": "1778820874356zbf1vdaz1",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 155.72,
+      "date": "2026-04-27T04:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 12"
+    },
+    {
+      "id": "17788208743565b6g5y211",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 55.8,
+      "date": "2026-04-26T21:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 12"
+    },
+    {
+      "id": "177882087435658gq71a0r",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 32.9,
+      "date": "2026-04-27T00:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 12"
+    },
+    {
+      "id": "1778820874356mp955wg8i",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 57.49,
+      "date": "2026-04-26T22:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 12"
+    },
+    {
+      "id": "1778820874356q9n7ma8i4",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 25.55,
+      "date": "2026-04-26T23:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 12"
+    },
+    {
+      "id": "17788208743567rfkh82u5",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 14.03,
+      "date": "2026-04-27T03:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 12"
+    },
+    {
+      "id": "1778820874356dqc1fa77v",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 140.9,
+      "date": "2026-04-27T04:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 12"
+    },
+    {
+      "id": "17788208743569z8cangjy",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 3,
+      "date": "2026-04-26T22:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x1"
+    },
+    {
+      "id": "1778820874356julhz8a6t",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 3,
+      "date": "2026-04-26T22:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x1"
+    },
+    {
+      "id": "177882087435602pnp130g",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 5,
+      "date": "2026-04-26T19:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x2"
+    },
+    {
+      "id": "1778820874356tqol4wv1k",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 2.5,
+      "date": "2026-04-26T23:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x1"
+    },
+    {
+      "id": "1778820874356umkyb0aea",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 3,
+      "date": "2026-04-26T19:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x1"
+    },
+    {
+      "id": "17788208743563danl029j",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 9,
+      "date": "2026-04-26T21:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x3"
+    },
+    {
+      "id": "17788208743567b36t9r2l",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 6,
+      "date": "2026-04-27T01:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x2"
+    },
+    {
+      "id": "1778820874356h1l1xa7xv",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 2.5,
+      "date": "2026-04-27T01:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x1"
+    },
+    {
+      "id": "1778820874356kcy889xv7",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 6,
+      "date": "2026-04-26T21:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x2"
+    },
+    {
+      "id": "1778820874356oq4gi9cwb",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 12,
+      "date": "2026-04-26T23:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x4"
+    },
+    {
+      "id": "17788208743567aolfkr18",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 17.78,
+      "date": "2026-04-28T03:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 13"
+    },
+    {
+      "id": "1778820874356ytzws6m5f",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 23.88,
+      "date": "2026-04-27T23:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 13"
+    },
+    {
+      "id": "17788208743565n0b39m5t",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 25.28,
+      "date": "2026-04-28T04:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 13"
+    },
+    {
+      "id": "1778820874356quu0aybgs",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 218.98,
+      "date": "2026-04-28T03:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 13"
+    },
+    {
+      "id": "1778820874356ds5jfxq6b",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 116.22,
+      "date": "2026-04-27T21:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 13"
+    },
+    {
+      "id": "177882087435620mrc3amd",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 29.74,
+      "date": "2026-04-28T01:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 13"
+    },
+    {
+      "id": "1778820874356qqc5ckm7n",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 9,
+      "date": "2026-04-28T01:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x3"
+    },
+    {
+      "id": "1778820874356hirmt28s6",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 5,
+      "date": "2026-04-27T19:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x2"
+    },
+    {
+      "id": "1778820874356qdwyb99v8",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 5,
+      "date": "2026-04-28T02:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x2"
+    },
+    {
+      "id": "1778820874356felc04fgp",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 43.17,
+      "date": "2026-04-29T01:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 14"
+    },
+    {
+      "id": "177882087435615fa6u3c3",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 21.52,
+      "date": "2026-04-29T01:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 14"
+    },
+    {
+      "id": "1778820874356noe09ylea",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 31.01,
+      "date": "2026-04-28T19:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 14"
+    },
+    {
+      "id": "1778820874356xm8fenk8z",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 32.22,
+      "date": "2026-04-28T20:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 14"
+    },
+    {
+      "id": "1778820874356usn0mnyx6",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 2.5,
+      "date": "2026-04-28T22:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x1"
+    },
+    {
+      "id": "1778820874356lvbr9k8wu",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 10,
+      "date": "2026-04-29T00:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x4"
+    },
+    {
+      "id": "1778820874356spfxeptut",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 22.12,
+      "date": "2026-04-30T02:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 15"
+    },
+    {
+      "id": "17788208743568yrwq67ex",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 35.45,
+      "date": "2026-04-30T02:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 15"
+    },
+    {
+      "id": "17788208743568lpc17aoh",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 119.49,
+      "date": "2026-04-30T04:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 15"
+    },
+    {
+      "id": "17788208743569vpqfrs6k",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 113.77,
+      "date": "2026-04-29T19:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 15"
+    },
+    {
+      "id": "1778820874356cgqianwa8",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 76.51,
+      "date": "2026-04-30T03:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 15"
+    },
+    {
+      "id": "177882087435634zhnom05",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 10,
+      "date": "2026-04-30T01:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x4"
+    },
+    {
+      "id": "177882087435666uuikd1i",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 21.16,
+      "date": "2026-04-30T23:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 16"
+    },
+    {
+      "id": "1778820874356i9b6vwkra",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 8.72,
+      "date": "2026-04-30T19:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 16"
+    },
+    {
+      "id": "17788208743567orix7zjd",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 34.72,
+      "date": "2026-05-01T04:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 16"
+    },
+    {
+      "id": "1778820874356x0ypjzeru",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 30.67,
+      "date": "2026-04-30T23:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 16"
+    },
+    {
+      "id": "177882087435678j0gr81j",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 232.64,
+      "date": "2026-04-30T19:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 16"
+    },
+    {
+      "id": "1778820874356xfpxl353n",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 46.64,
+      "date": "2026-04-30T21:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 16"
+    },
+    {
+      "id": "1778820874356xv1ufd1kq",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 26.86,
+      "date": "2026-04-30T20:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 16"
+    },
+    {
+      "id": "1778820874356jb7tlg3ik",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 2.5,
+      "date": "2026-05-01T02:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x1"
+    },
+    {
+      "id": "1778820874356rmr6mjiag",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 2.5,
+      "date": "2026-05-01T03:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x1"
+    },
+    {
+      "id": "1778820874356vstqa0t4n",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 5,
+      "date": "2026-04-30T21:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x2"
+    },
+    {
+      "id": "1778820874356mwc7v0blf",
+      "type": "expense",
+      "category": "Servicios",
+      "amount": 84.31,
+      "date": "2026-05-01T04:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Pago de luz/agua/mantenimiento"
+    },
+    {
+      "id": "1778820874356kdcwsyjjo",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 115.53,
+      "date": "2026-05-01T20:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 17"
+    },
+    {
+      "id": "17788208743565hxg66s2r",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 55.46,
+      "date": "2026-05-01T23:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 17"
+    },
+    {
+      "id": "1778820874356ekxxumb2t",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 23.88,
+      "date": "2026-05-02T01:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 17"
+    },
+    {
+      "id": "1778820874356zadvysjk7",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 27.82,
+      "date": "2026-05-02T01:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 17"
+    },
+    {
+      "id": "17788208743566gmv7djgy",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 190.51,
+      "date": "2026-05-02T04:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 17"
+    },
+    {
+      "id": "1778820874356rb53j04q0",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 9.23,
+      "date": "2026-05-01T21:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 17"
+    },
+    {
+      "id": "1778820874356a0jg2ldcu",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 11.44,
+      "date": "2026-05-02T03:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 17"
+    },
+    {
+      "id": "1778820874356jx88ocrag",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 32.28,
+      "date": "2026-05-02T02:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 17"
+    },
+    {
+      "id": "1778820874356778gu50xd",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 23.93,
+      "date": "2026-05-02T02:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 17"
+    },
+    {
+      "id": "17788208743565r7bb3y1p",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 24.03,
+      "date": "2026-05-01T23:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 17"
+    },
+    {
+      "id": "17788208743569bl6vnz4u",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 6,
+      "date": "2026-05-01T21:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x2"
+    },
+    {
+      "id": "1778820874356kj2qgc92l",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 12,
+      "date": "2026-05-01T21:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x4"
+    },
+    {
+      "id": "1778820874356cq9u57d2y",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 5,
+      "date": "2026-05-02T00:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x2"
+    },
+    {
+      "id": "1778820874356n0vm567zm",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 9,
+      "date": "2026-05-01T23:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x3"
+    },
+    {
+      "id": "1778820874356js358ft82",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 5,
+      "date": "2026-05-02T04:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x2"
+    },
+    {
+      "id": "17788208743569qv4dhooe",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 6,
+      "date": "2026-05-01T22:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x2"
+    },
+    {
+      "id": "1778820874356ahpkdko30",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 5,
+      "date": "2026-05-02T00:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x2"
+    },
+    {
+      "id": "1778820874356ai16898sw",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 5,
+      "date": "2026-05-02T03:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x2"
+    },
+    {
+      "id": "1778820874356hgmnqgqsh",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 12,
+      "date": "2026-05-01T22:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x4"
+    },
+    {
+      "id": "17788208743562uot1q23l",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 7.5,
+      "date": "2026-05-02T02:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x3"
+    },
+    {
+      "id": "1778820874356gg9mxk5h5",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 2.5,
+      "date": "2026-05-01T21:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x1"
+    },
+    {
+      "id": "1778820874356lazu5p4ch",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 25.2,
+      "date": "2026-05-03T04:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 18"
+    },
+    {
+      "id": "1778820874356qn6v6jeej",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 199.14,
+      "date": "2026-05-02T23:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 18"
+    },
+    {
+      "id": "1778820874356ay5dyos8k",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 81.58,
+      "date": "2026-05-03T00:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 18"
+    },
+    {
+      "id": "1778820874356xa66y2am2",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 28.61,
+      "date": "2026-05-02T20:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 18"
+    },
+    {
+      "id": "1778820874356p0k98frkn",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 17.58,
+      "date": "2026-05-02T22:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 18"
+    },
+    {
+      "id": "1778820874356jl774ehkq",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 19.76,
+      "date": "2026-05-03T00:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 18"
+    },
+    {
+      "id": "1778820874356zkp75tj5n",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 18.87,
+      "date": "2026-05-03T02:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 18"
+    },
+    {
+      "id": "1778820874356q9qlsnok3",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 27.22,
+      "date": "2026-05-02T19:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 18"
+    },
+    {
+      "id": "1778820874356jaj0oeb86",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 24.2,
+      "date": "2026-05-03T01:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 18"
+    },
+    {
+      "id": "1778820874356kum1kbgt7",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 32.36,
+      "date": "2026-05-02T22:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 18"
+    },
+    {
+      "id": "17788208743565imp0l3l5",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 5,
+      "date": "2026-05-03T03:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x2"
+    },
+    {
+      "id": "1778820874356ytzz5pdzi",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 6,
+      "date": "2026-05-02T23:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x2"
+    },
+    {
+      "id": "1778820874356gtwpe5ww3",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 7.5,
+      "date": "2026-05-03T00:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x3"
+    },
+    {
+      "id": "1778820874356khkc5pzdp",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 3,
+      "date": "2026-05-02T22:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x1"
+    },
+    {
+      "id": "1778820874356fgct7o61j",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 9,
+      "date": "2026-05-03T03:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x3"
+    },
+    {
+      "id": "1778820874356okmw9eog5",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 9,
+      "date": "2026-05-02T21:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x3"
+    },
+    {
+      "id": "17788208743567eji1ke5l",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 9,
+      "date": "2026-05-02T22:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x3"
+    },
+    {
+      "id": "1778820874356z7g5eifwo",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 5,
+      "date": "2026-05-03T02:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x2"
+    },
+    {
+      "id": "17788208743561xtkxiwqf",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 12,
+      "date": "2026-05-02T23:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x4"
+    },
+    {
+      "id": "1778820874356dak2invq5",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 10,
+      "date": "2026-05-03T02:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x4"
+    },
+    {
+      "id": "1778820874356ch8qpfq8t",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 12,
+      "date": "2026-05-02T22:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x4"
+    },
+    {
+      "id": "1778820874356mcjgbwvl6",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 3,
+      "date": "2026-05-03T04:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x1"
+    },
+    {
+      "id": "1778820874356j8bo9dw6g",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 191.27,
+      "date": "2026-05-04T02:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 19"
+    },
+    {
+      "id": "1778820874356bjkzvl6x8",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 79.83,
+      "date": "2026-05-04T03:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 19"
+    },
+    {
+      "id": "177882087435693aunztp0",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 23.59,
+      "date": "2026-05-03T19:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 19"
+    },
+    {
+      "id": "1778820874356a4u0lvjb0",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 10.44,
+      "date": "2026-05-03T21:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 19"
+    },
+    {
+      "id": "1778820874356j36z9z4nc",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 220.37,
+      "date": "2026-05-03T21:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 19"
+    },
+    {
+      "id": "1778820874356vxxhumqng",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 12.4,
+      "date": "2026-05-04T03:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 19"
+    },
+    {
+      "id": "1778820874356244wxl72z",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 35.01,
+      "date": "2026-05-04T00:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 19"
+    },
+    {
+      "id": "1778820874356betoyhhqn",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 80.49,
+      "date": "2026-05-04T04:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 19"
+    },
+    {
+      "id": "1778820874356jspala5uw",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 31.26,
+      "date": "2026-05-04T01:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 19"
+    },
+    {
+      "id": "1778820874356knod2fxm7",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 148.27,
+      "date": "2026-05-04T01:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 19"
+    },
+    {
+      "id": "177882087435620ds62hfp",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 40.26,
+      "date": "2026-05-03T20:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 19"
+    },
+    {
+      "id": "177882087435661dhnthm8",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 30.48,
+      "date": "2026-05-03T23:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 19"
+    },
+    {
+      "id": "1778820874356rkomsmvqq",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 25.89,
+      "date": "2026-05-03T23:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 19"
+    },
+    {
+      "id": "1778820874356b3sxtz2pb",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 120.43,
+      "date": "2026-05-03T19:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 19"
+    },
+    {
+      "id": "1778820874356w8k67ubs0",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 37.17,
+      "date": "2026-05-03T20:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 19"
+    },
+    {
+      "id": "1778820874356f61job7dl",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 32.31,
+      "date": "2026-05-04T03:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 19"
+    },
+    {
+      "id": "1778820874356bydh0ajmm",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 10.2,
+      "date": "2026-05-03T20:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 19"
+    },
+    {
+      "id": "1778820874356blueld1tq",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 12,
+      "date": "2026-05-03T22:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x4"
+    },
+    {
+      "id": "1778820874356dpuuhr06r",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 9,
+      "date": "2026-05-03T20:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x3"
+    },
+    {
+      "id": "1778820874356gi32z9uec",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 9,
+      "date": "2026-05-04T04:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x3"
+    },
+    {
+      "id": "17788208743563ezn2phir",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 7.5,
+      "date": "2026-05-03T20:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x3"
+    },
+    {
+      "id": "1778820874356de90jdgbt",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 3,
+      "date": "2026-05-04T00:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x1"
+    },
+    {
+      "id": "17788208743561tpavta7p",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 70.65,
+      "date": "2026-05-04T22:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 20"
+    },
+    {
+      "id": "1778820874356cwzcsnm8a",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 10.18,
+      "date": "2026-05-04T20:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 20"
+    },
+    {
+      "id": "1778820874356k88grlhe4",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 21.06,
+      "date": "2026-05-04T23:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 20"
+    },
+    {
+      "id": "1778820874356lxem01p8f",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 158.24,
+      "date": "2026-05-04T23:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 20"
+    },
+    {
+      "id": "1778820874356azxhvqnxh",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 6,
+      "date": "2026-05-04T21:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x2"
+    },
+    {
+      "id": "1778820874356jj1fl1ed5",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 5,
+      "date": "2026-05-05T01:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x2"
+    },
+    {
+      "id": "1778820874356m3d83jtwa",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 21.02,
+      "date": "2026-05-05T22:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 21"
+    },
+    {
+      "id": "1778820874356c4qvch9if",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 15.92,
+      "date": "2026-05-05T22:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 21"
+    },
+    {
+      "id": "1778820874356pf9jpsy3w",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 13.18,
+      "date": "2026-05-05T21:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 21"
+    },
+    {
+      "id": "177882087435698gg4ofpr",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 35.6,
+      "date": "2026-05-06T00:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 21"
+    },
+    {
+      "id": "17788208743569fajpocq6",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 5,
+      "date": "2026-05-05T19:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x2"
+    },
+    {
+      "id": "1778820874356fex856c5f",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 12,
+      "date": "2026-05-06T00:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x4"
+    },
+    {
+      "id": "1778820874356bdhsh3ywt",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 118.6,
+      "date": "2026-05-06T23:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 22"
+    },
+    {
+      "id": "1778820874356x6awm4pz3",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 35.29,
+      "date": "2026-05-07T01:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 22"
+    },
+    {
+      "id": "17788208743564uhkfysd8",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 179.16,
+      "date": "2026-05-07T01:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 22"
+    },
+    {
+      "id": "1778820874356mg87rzikk",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 26.02,
+      "date": "2026-05-06T20:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 22"
+    },
+    {
+      "id": "1778820874356oimlcpc7o",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 12.85,
+      "date": "2026-05-07T00:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 22"
+    },
+    {
+      "id": "1778820874356k15zjcgkz",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 12,
+      "date": "2026-05-06T22:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x4"
+    },
+    {
+      "id": "1778820874356qlzb2r1jn",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 3,
+      "date": "2026-05-07T00:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x1"
+    },
+    {
+      "id": "1778820874356zodgfiuao",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 7.5,
+      "date": "2026-05-07T01:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x3"
+    },
+    {
+      "id": "1778820874356hagmqgdss",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 19.82,
+      "date": "2026-05-08T02:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 23"
+    },
+    {
+      "id": "17788208743569cn0f96w5",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 13.01,
+      "date": "2026-05-07T20:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 23"
+    },
+    {
+      "id": "1778820874356kot43bcai",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 13.78,
+      "date": "2026-05-08T01:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 23"
+    },
+    {
+      "id": "1778820874356hcev6omot",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 175.37,
+      "date": "2026-05-07T19:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 23"
+    },
+    {
+      "id": "17788208743563kvuzsxwe",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 23.01,
+      "date": "2026-05-08T01:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 23"
+    },
+    {
+      "id": "17788208743568ruo0sjkp",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 5,
+      "date": "2026-05-07T19:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x2"
+    },
+    {
+      "id": "177882087435611q1oquma",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 7.5,
+      "date": "2026-05-08T04:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x3"
+    },
+    {
+      "id": "177882087435690qgbqk9o",
+      "type": "expense",
+      "category": "Servicios",
+      "amount": 120.71,
+      "date": "2026-05-08T04:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Pago de luz/agua/mantenimiento"
+    },
+    {
+      "id": "17788208743567czb1biz0",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 17.93,
+      "date": "2026-05-08T20:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 24"
+    },
+    {
+      "id": "1778820874356ru0x5e009",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 17.19,
+      "date": "2026-05-08T20:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 24"
+    },
+    {
+      "id": "1778820874356zdnknyxia",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 28.07,
+      "date": "2026-05-08T19:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 24"
+    },
+    {
+      "id": "1778820874356swfky1uj0",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 29.67,
+      "date": "2026-05-08T20:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 24"
+    },
+    {
+      "id": "1778820874356yzkmckfrt",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 26.91,
+      "date": "2026-05-08T22:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 24"
+    },
+    {
+      "id": "1778820874356qxpr77zau",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 8.52,
+      "date": "2026-05-09T04:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 24"
+    },
+    {
+      "id": "1778820874356d0bqiy3tn",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 15.86,
+      "date": "2026-05-08T20:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 24"
+    },
+    {
+      "id": "1778820874356vo1b5ttlx",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 33.52,
+      "date": "2026-05-08T23:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 24"
+    },
+    {
+      "id": "17788208743568hlcxijqg",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 167.59,
+      "date": "2026-05-08T22:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 24"
+    },
+    {
+      "id": "1778820874356ka3r8fax1",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 24.53,
+      "date": "2026-05-09T04:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 24"
+    },
+    {
+      "id": "1778820874356vpsl0nwx4",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 9,
+      "date": "2026-05-09T00:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x3"
+    },
+    {
+      "id": "17788208743566ugebbkor",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 3,
+      "date": "2026-05-09T01:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x1"
+    },
+    {
+      "id": "17788208743562cp3n1nre",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 10,
+      "date": "2026-05-08T19:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x4"
+    },
+    {
+      "id": "177882087435673paakjte",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 10,
+      "date": "2026-05-09T00:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x4"
+    },
+    {
+      "id": "1778820874356907u7zw3s",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 7.5,
+      "date": "2026-05-09T01:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x3"
+    },
+    {
+      "id": "177882087435619izrzxwb",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 3,
+      "date": "2026-05-09T04:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x1"
+    },
+    {
+      "id": "1778820874356zyh612etn",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 10,
+      "date": "2026-05-09T01:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x4"
+    },
+    {
+      "id": "1778820874356od1fxevxm",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 10,
+      "date": "2026-05-08T21:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x4"
+    },
+    {
+      "id": "1778820874356avflk79qt",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 12,
+      "date": "2026-05-09T00:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x4"
+    },
+    {
+      "id": "177882087435641t8ppxdy",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 21.49,
+      "date": "2026-05-09T23:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 25"
+    },
+    {
+      "id": "1778820874356ut4vjy82x",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 36.42,
+      "date": "2026-05-10T01:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 25"
+    },
+    {
+      "id": "1778820874356kzhknb66e",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 37,
+      "date": "2026-05-09T21:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 25"
+    },
+    {
+      "id": "1778820874356vzam3tfzv",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 90.82,
+      "date": "2026-05-10T04:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 25"
+    },
+    {
+      "id": "1778820874356w27a07kur",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 23.09,
+      "date": "2026-05-10T04:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 25"
+    },
+    {
+      "id": "17788208743566fsavku1l",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 50.25,
+      "date": "2026-05-10T03:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 25"
+    },
+    {
+      "id": "1778820874356k71lee7vd",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 30.68,
+      "date": "2026-05-10T04:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 25"
+    },
+    {
+      "id": "1778820874356i4c0o7pt6",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 36.44,
+      "date": "2026-05-09T21:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 25"
+    },
+    {
+      "id": "1778820874356fkawwfc41",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 19.06,
+      "date": "2026-05-10T00:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 25"
+    },
+    {
+      "id": "1778820874356y61svwtuj",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 13.93,
+      "date": "2026-05-09T22:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 25"
+    },
+    {
+      "id": "1778820874356b6wi23r9f",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 169.2,
+      "date": "2026-05-10T02:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 25"
+    },
+    {
+      "id": "1778820874356ax82yhpkd",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 26.22,
+      "date": "2026-05-10T04:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 25"
+    },
+    {
+      "id": "1778820874356omnygkikc",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 87.83,
+      "date": "2026-05-10T04:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 25"
+    },
+    {
+      "id": "1778820874356l1nezmldh",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 6,
+      "date": "2026-05-10T02:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x2"
+    },
+    {
+      "id": "1778820874356lxuhc14u6",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 9,
+      "date": "2026-05-09T19:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x3"
+    },
+    {
+      "id": "1778820874356o6z5ajhay",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 7.5,
+      "date": "2026-05-09T21:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x3"
+    },
+    {
+      "id": "1778820874356focnzvc6f",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 6,
+      "date": "2026-05-10T01:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x2"
+    },
+    {
+      "id": "17788208743563olkablsi",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 2.5,
+      "date": "2026-05-10T01:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x1"
+    },
+    {
+      "id": "1778820874356bteh8wj9d",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 3,
+      "date": "2026-05-10T00:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x1"
+    },
+    {
+      "id": "1778820874356tfccgube3",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 6,
+      "date": "2026-05-10T00:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x2"
+    },
+    {
+      "id": "1778820874356n7bykxxn9",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 2.5,
+      "date": "2026-05-10T00:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x1"
+    },
+    {
+      "id": "1778820874356o7g01vn0r",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 3,
+      "date": "2026-05-09T23:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x1"
+    },
+    {
+      "id": "1778820874356bmupjzfm8",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 3,
+      "date": "2026-05-09T19:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x1"
+    },
+    {
+      "id": "1778820874356dv950cwx5",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 16.77,
+      "date": "2026-05-11T04:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 26"
+    },
+    {
+      "id": "1778820874356pbve8m7xq",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 35.62,
+      "date": "2026-05-10T19:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 26"
+    },
+    {
+      "id": "1778820874356onpz1jbnq",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 9.76,
+      "date": "2026-05-10T22:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 26"
+    },
+    {
+      "id": "17788208743565hv53ogi0",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 19.25,
+      "date": "2026-05-11T03:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 26"
+    },
+    {
+      "id": "1778820874356fe9wtnffo",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 31.56,
+      "date": "2026-05-10T21:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 26"
+    },
+    {
+      "id": "1778820874356osaabh0x3",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 65.99,
+      "date": "2026-05-10T23:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 26"
+    },
+    {
+      "id": "1778820874356xspwxle14",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 16.11,
+      "date": "2026-05-10T22:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 26"
+    },
+    {
+      "id": "1778820874356qax9uargr",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 56.49,
+      "date": "2026-05-10T23:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 26"
+    },
+    {
+      "id": "1778820874356pytycr6l8",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 92.31,
+      "date": "2026-05-10T23:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 26"
+    },
+    {
+      "id": "17788208743565xgva5qih",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 77.67,
+      "date": "2026-05-11T04:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 26"
+    },
+    {
+      "id": "1778820874356gtj6cqwlq",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 95.79,
+      "date": "2026-05-10T22:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 26"
+    },
+    {
+      "id": "17788208743562w5vtu5h7",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 137.5,
+      "date": "2026-05-11T02:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 26"
+    },
+    {
+      "id": "1778820874356fzm6l61si",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 29.02,
+      "date": "2026-05-11T03:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 26"
+    },
+    {
+      "id": "1778820874356o5ikkmsue",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 27.21,
+      "date": "2026-05-10T20:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 26"
+    },
+    {
+      "id": "1778820874356e0bqjv7wo",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 34.02,
+      "date": "2026-05-11T01:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 26"
+    },
+    {
+      "id": "17788208743561v8cvavrq",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 34.21,
+      "date": "2026-05-11T04:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 26"
+    },
+    {
+      "id": "1778820874356o1u7ue7w6",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 9,
+      "date": "2026-05-11T04:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x3"
+    },
+    {
+      "id": "17788208743560sa9pkkjv",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 10,
+      "date": "2026-05-11T03:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x4"
+    },
+    {
+      "id": "1778820874356wn00qf8f6",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 5,
+      "date": "2026-05-10T22:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x2"
+    },
+    {
+      "id": "1778820874356sdh9ez520",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 3,
+      "date": "2026-05-10T23:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x1"
+    },
+    {
+      "id": "1778820874356vwe20t3ox",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 9,
+      "date": "2026-05-10T21:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x3"
+    },
+    {
+      "id": "17788208743569iy2myqru",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 5,
+      "date": "2026-05-10T23:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x2"
+    },
+    {
+      "id": "177882087435622mpnb0fa",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 3,
+      "date": "2026-05-10T19:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x1"
+    },
+    {
+      "id": "1778820874356yqm42561d",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 12,
+      "date": "2026-05-11T03:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x4"
+    },
+    {
+      "id": "1778820874356dj4znjmoy",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 16.33,
+      "date": "2026-05-11T20:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 27"
+    },
+    {
+      "id": "1778820874356e42tmcjky",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 24.68,
+      "date": "2026-05-12T02:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 27"
+    },
+    {
+      "id": "1778820874356188y678ao",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 18.75,
+      "date": "2026-05-12T03:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 27"
+    },
+    {
+      "id": "1778820874356m747vgx9r",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 26.88,
+      "date": "2026-05-11T20:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 27"
+    },
+    {
+      "id": "1778820874356vndb8lwbj",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 191.36,
+      "date": "2026-05-11T19:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 27"
+    },
+    {
+      "id": "1778820874356kizq4bhr7",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 115.8,
+      "date": "2026-05-11T19:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 27"
+    },
+    {
+      "id": "1778820874356heaaroefq",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 9,
+      "date": "2026-05-12T00:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x3"
+    },
+    {
+      "id": "1778820874356mksc160mt",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 2.5,
+      "date": "2026-05-12T01:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x1"
+    },
+    {
+      "id": "17788208743569c0wj7ym9",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 30.84,
+      "date": "2026-05-13T01:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 28"
+    },
+    {
+      "id": "1778820874356ycc72q15w",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 41.36,
+      "date": "2026-05-12T19:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 28"
+    },
+    {
+      "id": "1778820874356nr2iyjehj",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 14.66,
+      "date": "2026-05-12T19:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 28"
+    },
+    {
+      "id": "177882087435688qnv7mvn",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 19.96,
+      "date": "2026-05-12T21:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 28"
+    },
+    {
+      "id": "17788208743569telrxldv",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 34.56,
+      "date": "2026-05-13T01:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 28"
+    },
+    {
+      "id": "1778820874356c9slcmkk5",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 65.93,
+      "date": "2026-05-12T23:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 28"
+    },
+    {
+      "id": "1778820874356y1i8oy9y2",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 77.43,
+      "date": "2026-05-12T23:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 28"
+    },
+    {
+      "id": "1778820874356ed8ok2oj8",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 3,
+      "date": "2026-05-12T20:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x1"
+    },
+    {
+      "id": "17788208743568ocy2gmw5",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 139.28,
+      "date": "2026-05-13T22:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 29"
+    },
+    {
+      "id": "17788208743569gauokg36",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 30.19,
+      "date": "2026-05-13T21:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 29"
+    },
+    {
+      "id": "177882087435638uqfv6cl",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 76.85,
+      "date": "2026-05-13T19:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 29"
+    },
+    {
+      "id": "1778820874356bu9pmg24k",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 19.41,
+      "date": "2026-05-13T22:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 29"
+    },
+    {
+      "id": "177882087435638bott8lm",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 23.73,
+      "date": "2026-05-14T00:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Billar - Día 29"
+    },
+    {
+      "id": "1778820874356gxz3i76w4",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 25.73,
+      "date": "2026-05-14T04:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 29"
+    },
+    {
+      "id": "17788208743562xjq8fd5n",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 96.62,
+      "date": "2026-05-13T20:54:34.356Z",
+      "paymentMethod": "yape",
+      "description": "Alquiler Poker - Día 29"
+    },
+    {
+      "id": "17788208743569iayk3iqd",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 7.5,
+      "date": "2026-05-13T19:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x3"
+    },
+    {
+      "id": "1778820874356myb2n65cw",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 22.08,
+      "date": "2026-05-14T20:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 30"
+    },
+    {
+      "id": "1778820874356pvqm21klv",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 36.55,
+      "date": "2026-05-14T21:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 30"
+    },
+    {
+      "id": "1778820874356mrd2gliyl",
+      "type": "income",
+      "category": "Alquiler Poker",
+      "amount": 160.52,
+      "date": "2026-05-14T19:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Poker - Día 30"
+    },
+    {
+      "id": "1778820874356k16fsty9v",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 30.47,
+      "date": "2026-05-15T00:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Billar - Día 30"
+    },
+    {
+      "id": "1778820874356t7j9x6rlc",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 7.5,
+      "date": "2026-05-15T03:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x3"
+    },
+    {
+      "id": "1778820874356g41hku2n1",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 10,
+      "date": "2026-05-15T04:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Agua San Mateo 500ml x4"
+    },
+    {
+      "id": "1778820874356c9d4uuen5",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 6,
+      "date": "2026-05-14T23:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Papas Lays Clásicas x2"
+    },
+    {
+      "id": "1778820874356epxsde6dt",
+      "type": "expense",
+      "category": "Servicios",
+      "amount": 67.15,
+      "date": "2026-05-15T04:54:34.356Z",
+      "paymentMethod": "cash",
+      "description": "Pago de luz/agua/mantenimiento"
+    },
+    {
+      "id": "1778821436886",
+      "type": "income",
+      "category": "Pago Deuda",
+      "amount": 8.05,
+      "date": "2026-05-15T05:03:56.886Z",
+      "paymentMethod": "yape",
+      "description": "Pago deuda de Nemo: Alquiler Mesa Billar 1 + Venta: Cerveza Pilsen x1"
+    }
+  ],
+  "debts": [
+    {
+      "id": "1778821405135",
+      "clientName": "Nemo",
+      "amount": 8.05,
+      "reason": "Alquiler Mesa Billar 1 + Venta: Cerveza Pilsen x1",
+      "date": "2026-05-15T05:03:25.113Z",
+      "status": "paid"
+    }
+  ],
+  "settings": [
+    {
+      "id": "1",
+      "billiardRate": 15,
+      "pokerRate": 10
+    }
+  ]
+}
