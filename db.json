@@ -77,6 +77,35 @@
       "totalAmount": 0.05,
       "paymentMethod": "debt",
       "status": "completed"
+    },
+    {
+      "id": "NuuffK7JA00",
+      "tableId": "b1",
+      "startTime": "2026-05-15T21:24:50.808Z",
+      "endTime": "2026-05-15T21:25:02.709Z",
+      "fixedHours": 1,
+      "totalAmount": 15,
+      "paymentMethod": "cash",
+      "status": "completed"
+    },
+    {
+      "id": "lLjXodX--gI",
+      "tableId": "b1",
+      "startTime": "2026-05-17T01:25:28.887Z",
+      "endTime": "2026-05-17T01:25:33.638Z",
+      "totalAmount": 0.016666666666666666,
+      "paymentMethod": "cash",
+      "status": "completed"
+    },
+    {
+      "id": "l_7Ct5QopSU",
+      "tableId": "b1",
+      "startTime": "2026-05-17T01:25:39.970Z",
+      "endTime": "2026-05-17T01:25:50.639Z",
+      "fixedHours": 1,
+      "totalAmount": 15,
+      "paymentMethod": "debt",
+      "status": "completed"
     }
   ],
   "inventory": [
@@ -84,7 +113,7 @@
       "id": "1778820965638",
       "name": "Cerveza Pilsen",
       "category": "bebidas",
-      "stock": 99,
+      "stock": 107,
       "minStock": 5,
       "buyPrice": 6.5,
       "sellPrice": 8,
@@ -3728,6 +3757,60 @@
       "date": "2026-05-15T05:03:56.886Z",
       "paymentMethod": "yape",
       "description": "Pago deuda de Nemo: Alquiler Mesa Billar 1 + Venta: Cerveza Pilsen x1"
+    },
+    {
+      "id": "nqy1Ro2bZMg",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 15,
+      "date": "2026-05-15T21:25:02.709Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Mesa Billar 1"
+    },
+    {
+      "id": "jMuweNnSD3g",
+      "type": "expense",
+      "category": "Compra Inventario",
+      "amount": 65,
+      "date": "2026-05-15T21:27:40.252Z",
+      "paymentMethod": "cash",
+      "description": "Reposición: Cerveza Pilsen x10"
+    },
+    {
+      "id": "fHuWSHfM_wo",
+      "type": "income",
+      "category": "Alquiler Billar",
+      "amount": 0.016666666666666666,
+      "date": "2026-05-17T01:25:33.638Z",
+      "paymentMethod": "cash",
+      "description": "Alquiler Mesa Billar 1"
+    },
+    {
+      "id": "aFJ0TmwxuaE",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 8,
+      "date": "2026-05-17T01:26:01.980Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Cerveza Pilsen x1"
+    },
+    {
+      "id": "W9iZXHxU8ug",
+      "type": "income",
+      "category": "Venta Productos",
+      "amount": 8,
+      "date": "2026-05-17T01:26:05.830Z",
+      "paymentMethod": "cash",
+      "description": "Venta: Cerveza Pilsen x1"
+    },
+    {
+      "id": "0zvgCzoL-jQ",
+      "type": "income",
+      "category": "Pago Deuda",
+      "amount": 15,
+      "date": "2026-05-17T01:26:38.980Z",
+      "paymentMethod": "yape",
+      "description": "Pago deuda de Nemo: Alquiler Mesa Billar 1"
     }
   ],
   "debts": [
@@ -3735,8 +3818,16 @@
       "id": "1778821405135",
       "clientName": "Nemo",
       "amount": 8.05,
-      "reason": "Alquiler Mesa Billar 1 + Venta: Cerveza Pilsen x1",
+      "reason": "Recien pago su moto",
       "date": "2026-05-15T05:03:25.113Z",
+      "status": "paid"
+    },
+    {
+      "clientName": "Nemo",
+      "amount": 15,
+      "reason": "Alquiler Mesa Billar 1",
+      "date": "2026-05-17T01:25:50.639Z",
+      "id": "vU9Hd_iBbrU",
       "status": "paid"
     }
   ],
@@ -3746,5 +3837,6 @@
       "billiardRate": 15,
       "pokerRate": 10
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
