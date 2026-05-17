@@ -91,7 +91,7 @@ const handleLogin = async () => {
 
       <!-- Footer -->
       <p class="mt-8 text-center text-sm text-customText-muted">
-        © 2024 MALAFAMA Billar & Poker
+        © 2026 MALAFAMA Billar & Poker
       </p>
     </div>
   </div>
