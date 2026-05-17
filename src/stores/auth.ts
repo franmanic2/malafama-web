@@ -20,7 +20,12 @@ export const useAuthStore = defineStore('auth', () => {
   async function login(username: string, password: string) {
     // In a real app, we would call the API. Here we mock it.
     if (username === 'admin' && password === 'admin123') {
-      const mockUser = { id: '1', username: 'admin', name: 'Administrador' };
+      const mockUser = { id: '1', username: 'admin', name: 'Administrador', role: 'admin' };
+      user.value = mockUser;
+      localStorage.setItem('user', JSON.stringify(mockUser));
+      return true;
+    } else if (username === 'malafama1' && password === 'salud123') {
+      const mockUser = { id: '2', username: 'malafama1', name: 'Mala Fama 1', role: 'staff' };
       user.value = mockUser;
       localStorage.setItem('user', JSON.stringify(mockUser));
       return true;

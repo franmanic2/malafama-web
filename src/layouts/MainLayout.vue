@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 import { useAuthStore } from '../stores/auth';
 import { 
@@ -19,14 +19,19 @@ const route = useRoute();
 const authStore = useAuthStore();
 const isSidebarOpen = ref(true);
 
-const navigation = [
-  { name: 'Dashboard', href: '/', icon: LayoutDashboard },
-  { name: 'Mesas', href: '/tables', icon: Dices },
-  { name: 'Inventario', href: '/inventory', icon: Package },
-  { name: 'Finanzas', href: '/finance', icon: CircleDollarSign },
-  { name: 'Deudas', href: '/debts', icon: UsersRound },
-  { name: 'Reportes', href: '/reports', icon: BarChart3 },
-];
+const navigation = computed(() => {
+  const items = [
+    { name: 'Dashboard', href: '/', icon: LayoutDashboard, roles: ['admin'] },
+    { name: 'Mesas', href: '/tables', icon: Dices, roles: ['admin', 'staff'] },
+    { name: 'Inventario', href: '/inventory', icon: Package, roles: ['admin', 'staff'] },
+    { name: 'Finanzas', href: '/finance', icon: CircleDollarSign, roles: ['admin'] },
+    { name: 'Deudas', href: '/debts', icon: UsersRound, roles: ['admin'] },
+    { name: 'Reportes', href: '/reports', icon: BarChart3, roles: ['admin'] },
+  ];
+  
+  const userRole = authStore.user?.role || 'admin';
+  return items.filter(item => item.roles.includes(userRole));
+});
 
 const logout = () => {
   authStore.logout();
@@ -86,7 +91,9 @@ const toggleSidebar = () => {
             </div>
             <div class="ml-3 overflow-hidden">
               <p class="text-sm font-medium text-white truncate">{{ authStore.user?.name }}</p>
-              <p class="text-xs text-customText-muted truncate">Admin</p>
+              <p class="text-xs text-customText-muted truncate">
+                {{ authStore.user?.role === 'admin' ? 'Administrador' : 'Personal' }}
+              </p>
             </div>
           </div>
           <button 

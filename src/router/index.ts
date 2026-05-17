@@ -18,32 +18,38 @@ const router = createRouter({
         {
           path: '',
           name: 'dashboard',
-          component: () => import('../views/DashboardView.vue')
+          component: () => import('../views/DashboardView.vue'),
+          meta: { roles: ['admin'] }
         },
         {
           path: 'tables',
           name: 'tables',
-          component: () => import('../views/TablesView.vue')
+          component: () => import('../views/TablesView.vue'),
+          meta: { roles: ['admin', 'staff'] }
         },
         {
           path: 'inventory',
           name: 'inventory',
-          component: () => import('../views/InventoryView.vue')
+          component: () => import('../views/InventoryView.vue'),
+          meta: { roles: ['admin', 'staff'] }
         },
         {
           path: 'finance',
           name: 'finance',
-          component: () => import('../views/FinanceView.vue')
+          component: () => import('../views/FinanceView.vue'),
+          meta: { roles: ['admin'] }
         },
         {
           path: 'debts',
           name: 'debts',
-          component: () => import('../views/DebtView.vue')
+          component: () => import('../views/DebtView.vue'),
+          meta: { roles: ['admin'] }
         },
         {
           path: 'reports',
           name: 'reports',
-          component: () => import('../views/ReportsView.vue')
+          component: () => import('../views/ReportsView.vue'),
+          meta: { roles: ['admin'] }
         }
       ]
     }
@@ -56,7 +62,24 @@ router.beforeEach((to, from, next) => {
   if (to.meta.requiresAuth && !authStore.isAuthenticated) {
     next('/login');
   } else if (to.name === 'login' && authStore.isAuthenticated) {
-    next('/');
+    const userRole = authStore.user?.role || 'admin';
+    if (userRole === 'admin') {
+      next('/');
+    } else {
+      next('/tables');
+    }
+  } else if (authStore.isAuthenticated) {
+    const userRole = authStore.user?.role || 'admin';
+    const allowedRoles = to.meta.roles as string[] | undefined;
+    if (allowedRoles && !allowedRoles.includes(userRole)) {
+      if (userRole === 'admin') {
+        next('/');
+      } else {
+        next('/tables');
+      }
+    } else {
+      next();
+    }
   } else {
     next();
   }

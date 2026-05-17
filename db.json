@@ -5,6 +5,12 @@
       "username": "admin",
       "password": "admin123",
       "name": "Administrador"
+    },
+    {
+      "id": "2",
+      "username": "malafama1",
+      "password": "salud123",
+      "name": "Mala Fama 1"
     }
   ],
   "tables": [
