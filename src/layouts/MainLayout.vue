@@ -42,7 +42,7 @@ const toggleSidebar = () => {
     <!-- Sidebar -->
     <aside 
       :class="[
-        'fixed inset-y-0 left-0 z-50 w-64 bg-dark-800 border-r border-dark-700 transition-transform duration-300 transform lg:translate-x-0 lg:static lg:inset-0',
+        'fixed inset-y-0 left-0 z-50 w-64 bg-dark-800 border-r border-dark-700 transition-transform duration-300 transform lg:translate-x-0 lg:sticky lg:top-0 lg:h-screen lg:flex-shrink-0',
         isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
       ]"
     >
@@ -61,7 +61,7 @@ const toggleSidebar = () => {
         </div>
 
         <!-- Nav -->
-        <nav class="flex-1 px-4 space-y-2 mt-4">
+        <nav class="flex-1 overflow-y-auto px-4 space-y-2 mt-4">
           <router-link 
             v-for="item in navigation" 
             :key="item.name" 
