@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted, computed } from 'vue';
 import { useTableStore, type Table } from '../stores/table';
+import { useAuthStore } from '../stores/auth';
 import { Clock, Users, DollarSign, Play, Square, Settings, Trash2 } from 'lucide-vue-next';
 import { differenceInSeconds, parseISO } from 'date-fns';
 
@@ -9,6 +10,7 @@ const props = defineProps<{
 }>();
 
 const tableStore = useTableStore();
+const authStore = useAuthStore();
 const showRentalModal = ref(false);
 const showFinishModal = ref(false);
 const currentTime = ref(new Date());
@@ -116,7 +118,7 @@ const handleFinish = async () => {
           {{ table.type }}
         </span>
         <button 
-          v-if="table.status === 'available'" 
+          v-if="table.status === 'available' && authStore.user?.role === 'admin'" 
           @click="tableStore.deleteTable(table.id)"
           class="text-customText-muted hover:text-red-400 transition-colors"
           title="Eliminar Mesa"

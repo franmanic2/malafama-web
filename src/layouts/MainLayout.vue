@@ -55,9 +55,7 @@ const toggleSidebar = () => {
         <!-- Logo -->
         <div class="p-6 flex items-center justify-between">
           <div class="flex items-center space-x-3">
-            <div class="w-10 h-10 bg-accent rounded-xl flex items-center justify-center shadow-lg shadow-accent/20">
-              <span class="text-white font-bold text-xl">M</span>
-            </div>
+            <img src="/malafama-logo.webp" alt="Malafama Logo" class="w-10 h-10 object-contain drop-shadow-[0_4px_6px_rgba(249,115,22,0.2)]" />
             <span class="text-2xl font-bold tracking-wider text-white">MALAFAMA</span>
           </div>
           <button @click="toggleSidebar" class="lg:hidden text-customText-muted hover:text-white">
@@ -112,9 +110,7 @@ const toggleSidebar = () => {
       <!-- Topbar (Mobile) -->
       <header class="lg:hidden bg-dark-800 border-b border-dark-700 p-4 flex items-center justify-between">
         <div class="flex items-center space-x-3">
-          <div class="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">
-            <span class="text-white font-bold">M</span>
-          </div>
+          <img src="/malafama-logo.webp" alt="Malafama Logo" class="w-8 h-8 object-contain" />
           <span class="font-bold text-white">MALAFAMA</span>
         </div>
         <button @click="toggleSidebar" class="text-customText-muted hover:text-white">

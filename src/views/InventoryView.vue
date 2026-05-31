@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import { onMounted, ref, computed } from 'vue';
 import { useInventoryStore, type Product } from '../stores/inventory';
+import { useAuthStore } from '../stores/auth';
 import { Package, Plus, Search, Trash2, Edit3, AlertCircle, ShoppingCart, PlusCircle } from 'lucide-vue-next';
 
 const inventoryStore = useInventoryStore();
+const authStore = useAuthStore();
 const searchQuery = ref('');
 const showAddModal = ref(false);
 const showSaleModal = ref(false);
@@ -139,7 +141,7 @@ const handleEditProduct = async () => {
         </h1>
         <p class="text-customText-muted">Gestión de productos, bebidas y snacks.</p>
       </div>
-      <button @click="showAddModal = true" class="btn btn-primary flex items-center space-x-2">
+      <button v-if="authStore.user?.role === 'admin'" @click="showAddModal = true" class="btn btn-primary flex items-center space-x-2">
         <Plus class="w-5 h-5" />
         <span>Nuevo Producto</span>
       </button>
@@ -202,10 +204,10 @@ const handleEditProduct = async () => {
                 <button @click="openRestockModal(product)" class="p-2 rounded-lg bg-accent/10 text-accent hover:bg-accent hover:text-white transition-all" title="Añadir Stock">
                   <PlusCircle class="w-4 h-4" />
                 </button>
-                <button @click="openEditModal(product)" class="p-2 rounded-lg bg-blue-500/10 text-blue-400 hover:bg-blue-500 hover:text-white transition-all" title="Editar Producto">
+                <button v-if="authStore.user?.role === 'admin'" @click="openEditModal(product)" class="p-2 rounded-lg bg-blue-500/10 text-blue-400 hover:bg-blue-500 hover:text-white transition-all" title="Editar Producto">
                   <Edit3 class="w-4 h-4" />
                 </button>
-                <button @click="handleDelete(product.id)" class="p-2 rounded-lg bg-red-500/10 text-red-400 hover:bg-red-500 hover:text-white transition-all" title="Eliminar">
+                <button v-if="authStore.user?.role === 'admin'" @click="handleDelete(product.id)" class="p-2 rounded-lg bg-red-500/10 text-red-400 hover:bg-red-500 hover:text-white transition-all" title="Eliminar">
                   <Trash2 class="w-4 h-4" />
                 </button>
               </div>

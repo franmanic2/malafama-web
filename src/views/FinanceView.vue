@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted, ref, computed } from 'vue';
 import { useFinanceStore, type Transaction } from '../stores/finance';
-import { CircleDollarSign, Plus, ArrowUpRight, ArrowDownRight, Search, Calendar, Filter } from 'lucide-vue-next';
+import { CircleDollarSign, Plus, ArrowUpRight, ArrowDownRight, Search, Calendar, Filter, Trash2 } from 'lucide-vue-next';
 import { format, parseISO } from 'date-fns';
 import { es } from 'date-fns/locale';
 
@@ -44,6 +44,23 @@ const handleAddExpense = async () => {
     date: new Date().toISOString()
   };
 };
+
+const handleDelete = async (id: string) => {
+  console.log('handleDelete called in view for ID:', id);
+  if (!id) {
+    alert('Error: El ID de la transacción no es válido o es inexistente.');
+    return;
+  }
+  if (confirm('¿Estás seguro de que deseas eliminar esta transacción? Esta acción no se puede deshacer.')) {
+    try {
+      await financeStore.deleteTransaction(id);
+      console.log('Deletion confirmed and finished.');
+    } catch (e: any) {
+      console.error('Error in handleDelete:', e);
+      alert('No se pudo eliminar la transacción: ' + e.message);
+    }
+  }
+};
 </script>
 
 <template>
@@ -65,17 +82,58 @@ const handleAddExpense = async () => {
 
     <!-- Summary -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="card p-6 border-green-500/20 bg-green-500/5">
-        <p class="text-sm font-medium text-green-400 uppercase tracking-wider mb-1">Ingresos Hoy</p>
-        <p class="text-3xl font-bold text-white">S/ {{ financeStore.summary.totalIncome.toFixed(2) }}</p>
+      <!-- Ingresos Hoy -->
+      <div class="card p-6 border-green-500/20 bg-green-500/5 flex flex-col justify-between">
+        <div>
+          <p class="text-sm font-medium text-green-400 uppercase tracking-wider mb-1">Ingresos Hoy</p>
+          <p class="text-3xl font-bold text-white">S/ {{ financeStore.summary.totalIncome.toFixed(2) }}</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-green-500/10 flex items-center justify-between text-xs text-customText-muted">
+          <span class="flex items-center">
+            <span class="w-1.5 h-1.5 rounded-full bg-green-400 mr-1.5"></span>
+            Efectivo: <strong class="text-white ml-1">S/ {{ financeStore.summary.cashIncome.toFixed(2) }}</strong>
+          </span>
+          <span class="flex items-center">
+            <span class="w-1.5 h-1.5 rounded-full bg-green-400 mr-1.5"></span>
+            Yape: <strong class="text-white ml-1">S/ {{ financeStore.summary.yapeIncome.toFixed(2) }}</strong>
+          </span>
+        </div>
       </div>
-      <div class="card p-6 border-red-500/20 bg-red-500/5">
-        <p class="text-sm font-medium text-red-400 uppercase tracking-wider mb-1">Egresos Hoy</p>
-        <p class="text-3xl font-bold text-white">S/ {{ financeStore.summary.totalExpenses.toFixed(2) }}</p>
+
+      <!-- Egresos Hoy -->
+      <div class="card p-6 border-red-500/20 bg-red-500/5 flex flex-col justify-between">
+        <div>
+          <p class="text-sm font-medium text-red-400 uppercase tracking-wider mb-1">Egresos Hoy</p>
+          <p class="text-3xl font-bold text-white">S/ {{ financeStore.summary.totalExpenses.toFixed(2) }}</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-red-500/10 flex items-center justify-between text-xs text-customText-muted">
+          <span class="flex items-center">
+            <span class="w-1.5 h-1.5 rounded-full bg-red-400 mr-1.5"></span>
+            Efectivo: <strong class="text-white ml-1">S/ {{ financeStore.summary.cashExpenses.toFixed(2) }}</strong>
+          </span>
+          <span class="flex items-center">
+            <span class="w-1.5 h-1.5 rounded-full bg-red-400 mr-1.5"></span>
+            Yape: <strong class="text-white ml-1">S/ {{ financeStore.summary.yapeExpenses.toFixed(2) }}</strong>
+          </span>
+        </div>
       </div>
-      <div class="card p-6 border-accent/20 bg-accent/5">
-        <p class="text-sm font-medium text-accent uppercase tracking-wider mb-1">Balance Hoy</p>
-        <p class="text-3xl font-bold text-white">S/ {{ financeStore.summary.netProfit.toFixed(2) }}</p>
+
+      <!-- Balance Hoy -->
+      <div class="card p-6 border-accent/20 bg-accent/5 flex flex-col justify-between">
+        <div>
+          <p class="text-sm font-medium text-accent uppercase tracking-wider mb-1">Balance Hoy</p>
+          <p class="text-3xl font-bold text-white">S/ {{ financeStore.summary.netProfit.toFixed(2) }}</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-accent/10 flex items-center justify-between text-xs text-customText-muted">
+          <span class="flex items-center">
+            <span class="w-1.5 h-1.5 rounded-full bg-accent mr-1.5"></span>
+            Efectivo: <strong class="text-white ml-1">S/ {{ (financeStore.summary.cashIncome - financeStore.summary.cashExpenses).toFixed(2) }}</strong>
+          </span>
+          <span class="flex items-center">
+            <span class="w-1.5 h-1.5 rounded-full bg-accent mr-1.5"></span>
+            Yape: <strong class="text-white ml-1">S/ {{ (financeStore.summary.yapeIncome - financeStore.summary.yapeExpenses).toFixed(2) }}</strong>
+          </span>
+        </div>
       </div>
     </div>
 
@@ -110,7 +168,7 @@ const handleAddExpense = async () => {
 
     <!-- Transaction List -->
     <div class="space-y-4">
-      <div v-for="t in filteredTransactions" :key="t.id" class="card p-4 hover:bg-dark-700/20 transition-all cursor-pointer">
+      <div v-for="t in filteredTransactions" :key="t.id" class="card p-4 hover:bg-dark-700/20 transition-all">
         <div class="flex items-center justify-between">
           <div class="flex items-center space-x-4">
             <div :class="['w-12 h-12 rounded-2xl flex items-center justify-center', t.type === 'income' ? 'bg-green-500/10 text-green-400' : 'bg-red-500/10 text-red-400']">
@@ -124,11 +182,20 @@ const handleAddExpense = async () => {
               </div>
             </div>
           </div>
-          <div class="text-right">
-            <p :class="['text-xl font-bold', t.type === 'income' ? 'text-green-400' : 'text-red-400']">
-              {{ t.type === 'income' ? '+' : '-' }} S/ {{ t.amount.toFixed(2) }}
-            </p>
-            <p class="text-xs text-customText-muted mt-1">{{ t.description }}</p>
+          <div class="flex items-center space-x-4">
+            <div class="text-right">
+              <p :class="['text-xl font-bold', t.type === 'income' ? 'text-green-400' : 'text-red-400']">
+                {{ t.type === 'income' ? '+' : '-' }} S/ {{ t.amount.toFixed(2) }}
+              </p>
+              <p class="text-xs text-customText-muted mt-1">{{ t.description }}</p>
+            </div>
+            <button 
+              @click="handleDelete(t.id)"
+              class="text-customText-muted hover:text-red-400 p-2 rounded-lg hover:bg-red-500/10 transition-all"
+              title="Eliminar Transacción"
+            >
+              <Trash2 class="w-5 h-5" />
+            </button>
           </div>
         </div>
       </div>

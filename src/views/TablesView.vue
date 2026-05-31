@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import { onMounted, computed, ref } from 'vue';
 import { useTableStore } from '../stores/table';
+import { useAuthStore } from '../stores/auth';
 import TableCard from '../components/TableCard.vue';
 import { Dices, Sparkles, Plus, Settings } from 'lucide-vue-next';
 
 const tableStore = useTableStore();
+const authStore = useAuthStore();
 
 onMounted(async () => {
   await tableStore.fetchTables();
@@ -64,10 +66,10 @@ const handleSaveSettings = async () => {
           <span class="w-2 h-2 rounded-full bg-blue-500"></span>
           <span class="text-sm font-medium">S/ {{ tableStore.settings?.pokerRate?.toFixed(2) }} / pers. / hora Poker</span>
         </div>
-        <button @click="openSettings" class="btn btn-secondary flex items-center space-x-2" title="Configurar Precios">
+        <button v-if="authStore.user?.role === 'admin'" @click="openSettings" class="btn btn-secondary flex items-center space-x-2" title="Configurar Precios">
           <Settings class="w-5 h-5" />
         </button>
-        <button @click="showAddModal = true" class="btn btn-primary flex items-center space-x-2 w-full sm:w-auto">
+        <button v-if="authStore.user?.role === 'admin'" @click="showAddModal = true" class="btn btn-primary flex items-center space-x-2 w-full sm:w-auto">
           <Plus class="w-5 h-5" />
           <span>Nueva Mesa</span>
         </button>

@@ -31,8 +31,8 @@ const handleLogin = async () => {
     <div class="max-w-md w-full">
       <!-- Logo Area -->
       <div class="text-center mb-10">
-        <div class="inline-flex items-center justify-center w-20 h-20 bg-accent rounded-3xl shadow-2xl shadow-accent/40 mb-6 animate-pulse">
-          <span class="text-white text-4xl font-bold">M</span>
+        <div class="inline-flex items-center justify-center w-24 h-24 mb-4">
+          <img src="/malafama-logo.webp" alt="Malafama Logo" class="w-full h-full object-contain drop-shadow-[0_10px_15px_rgba(249,115,22,0.35)] animate-pulse" />
         </div>
         <h1 class="text-4xl font-extrabold text-white tracking-tight mb-2">MALAFAMA</h1>
         <p class="text-customText-muted">Panel Administrativo</p>

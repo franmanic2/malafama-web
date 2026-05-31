@@ -57,20 +57,45 @@ export const useFinanceStore = defineStore('finance', () => {
       .filter(t => t.type === 'income' && t.paymentMethod === 'yape')
       .reduce((sum, t) => sum + t.amount, 0);
 
+    const cashExpenses = todayTransactions.value
+      .filter(t => t.type === 'expense' && t.paymentMethod === 'cash')
+      .reduce((sum, t) => sum + t.amount, 0);
+
+    const yapeExpenses = todayTransactions.value
+      .filter(t => t.type === 'expense' && t.paymentMethod === 'yape')
+      .reduce((sum, t) => sum + t.amount, 0);
+
     return {
       totalIncome: income,
       totalExpenses: expenses,
       netProfit: income - expenses,
       cashIncome,
-      yapeIncome
+      yapeIncome,
+      cashExpenses,
+      yapeExpenses
     };
   });
+
+  async function deleteTransaction(id: string) {
+    console.log('deleteTransaction called in store for ID:', id);
+    const backup = [...transactions.value];
+    transactions.value = transactions.value.filter(t => t.id !== id);
+    try {
+      await apiService.delete('finance', id);
+      console.log('Firestore delete complete for ID:', id);
+    } catch (err) {
+      console.error('Firestore delete failed, rolling back UI state:', err);
+      transactions.value = backup;
+      throw err;
+    }
+  }
 
   return {
     transactions,
     loading,
     fetchTransactions,
     addExpense,
+    deleteTransaction,
     summary,
     todayTransactions
   };
