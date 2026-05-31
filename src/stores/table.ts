@@ -36,19 +36,46 @@ export const useTableStore = defineStore('tables', () => {
   const settings = ref<Settings>({ id: '1', billiardRate: 15, pokerRate: 10 });
   const loading = ref(false);
 
-  async function fetchTables(silent = false) {
-    if (!silent) loading.value = true;
-    try {
-      const [tData, sData, rData] = await Promise.all([
-        apiService.getAll<Table>('tables'),
-        apiService.getAll<Settings>('settings'),
-        apiService.getAll<Rental>('rentals')
-      ]);
-      tables.value = tData;
-      if (sData && sData[0]) settings.value = sData[0];
-      rentals.value = rData;
-    } finally {
-      if (!silent) loading.value = false;
+  let unsubscribeTables: (() => void) | null = null;
+  let unsubscribeSettings: (() => void) | null = null;
+  let unsubscribeRentals: (() => void) | null = null;
+
+  async function fetchTables() {
+    if (unsubscribeTables && unsubscribeSettings && unsubscribeRentals) return;
+    loading.value = true;
+
+    let tablesLoaded = false;
+    let settingsLoaded = false;
+    let rentalsLoaded = false;
+
+    const checkLoaded = () => {
+      if (tablesLoaded && settingsLoaded && rentalsLoaded) {
+        loading.value = false;
+      }
+    };
+
+    if (!unsubscribeTables) {
+      unsubscribeTables = apiService.subscribe<Table>('tables', (data) => {
+        tables.value = data;
+        tablesLoaded = true;
+        checkLoaded();
+      });
+    }
+
+    if (!unsubscribeSettings) {
+      unsubscribeSettings = apiService.subscribe<Settings>('settings', (data) => {
+        if (data && data[0]) settings.value = data[0];
+        settingsLoaded = true;
+        checkLoaded();
+      });
+    }
+
+    if (!unsubscribeRentals) {
+      unsubscribeRentals = apiService.subscribe<Rental>('rentals', (data) => {
+        rentals.value = data;
+        rentalsLoaded = true;
+        checkLoaded();
+      });
     }
   }
 

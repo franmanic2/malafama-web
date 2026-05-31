@@ -19,13 +19,15 @@ export const useInventoryStore = defineStore('inventory', () => {
   const products = ref<Product[]>([]);
   const loading = ref(false);
 
+  let unsubscribeProducts: (() => void) | null = null;
+
   async function fetchProducts() {
+    if (unsubscribeProducts) return;
     loading.value = true;
-    try {
-      products.value = await apiService.getAll<Product>('inventory');
-    } finally {
+    unsubscribeProducts = apiService.subscribe<Product>('inventory', (data) => {
+      products.value = data;
       loading.value = false;
-    }
+    });
   }
 
   async function addProduct(product: Omit<Product, 'id'>) {

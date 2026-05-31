@@ -17,13 +17,15 @@ export const useDebtStore = defineStore('debts', () => {
   const debts = ref<Debt[]>([]);
   const loading = ref(false);
 
+  let unsubscribeDebts: (() => void) | null = null;
+
   async function fetchDebts() {
+    if (unsubscribeDebts) return;
     loading.value = true;
-    try {
-      debts.value = await apiService.getAll<Debt>('debts');
-    } finally {
+    unsubscribeDebts = apiService.subscribe<Debt>('debts', (data) => {
+      debts.value = data;
       loading.value = false;
-    }
+    });
   }
 
   async function addDebt(debt: Omit<Debt, 'id' | 'status'>) {

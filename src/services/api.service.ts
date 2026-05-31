@@ -1,5 +1,5 @@
 import { db } from '../firebase';
-import { collection, doc, getDocs, getDoc, setDoc, updateDoc, deleteDoc } from 'firebase/firestore';
+import { collection, doc, getDocs, getDoc, setDoc, updateDoc, deleteDoc, onSnapshot } from 'firebase/firestore';
 
 function cleanUndefined(obj: any): any {
   if (obj === null || typeof obj !== 'object') {
@@ -65,5 +65,18 @@ export const apiService = {
   async delete(resource: string, id: string | number): Promise<void> {
     const docRef = doc(db, resource, id.toString());
     await deleteDoc(docRef);
+  },
+
+  subscribe<T>(resource: string, callback: (data: T[]) => void): () => void {
+    const colRef = collection(db, resource);
+    return onSnapshot(colRef, (querySnapshot) => {
+      const items = querySnapshot.docs.map(docSnap => ({
+        id: docSnap.id,
+        ...docSnap.data()
+      } as unknown as T));
+      callback(items);
+    }, (error) => {
+      console.error(`Error in real-time subscription to ${resource}:`, error);
+    });
   },
 };

@@ -17,13 +17,15 @@ export const useFinanceStore = defineStore('finance', () => {
   const transactions = ref<Transaction[]>([]);
   const loading = ref(false);
 
+  let unsubscribeTransactions: (() => void) | null = null;
+
   async function fetchTransactions() {
+    if (unsubscribeTransactions) return;
     loading.value = true;
-    try {
-      transactions.value = await apiService.getAll<Transaction>('finance');
-    } finally {
+    unsubscribeTransactions = apiService.subscribe<Transaction>('finance', (data) => {
+      transactions.value = data;
       loading.value = false;
-    }
+    });
   }
 
   async function addExpense(expense: Omit<Transaction, 'id' | 'type'>) {
