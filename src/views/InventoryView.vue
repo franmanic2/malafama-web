@@ -21,7 +21,8 @@ const editForm = ref({
   id: '',
   name: '',
   buyPrice: 0,
-  sellPrice: 0
+  sellPrice: 0,
+  image: ''
 });
 
 const productForm = ref({
@@ -31,7 +32,8 @@ const productForm = ref({
   minStock: 5,
   buyPrice: 0,
   sellPrice: 0,
-  provider: ''
+  provider: '',
+  image: ''
 });
 
 onMounted(async () => {
@@ -56,7 +58,8 @@ const handleAddProduct = async () => {
     minStock: 5,
     buyPrice: 0,
     sellPrice: 0,
-    provider: ''
+    provider: '',
+    image: ''
   };
 };
 
@@ -110,7 +113,8 @@ const openEditModal = (product: Product) => {
     id: product.id,
     name: product.name,
     buyPrice: product.buyPrice,
-    sellPrice: product.sellPrice
+    sellPrice: product.sellPrice,
+    image: product.image || ''
   };
   showEditModal.value = true;
 };
@@ -121,12 +125,58 @@ const handleEditProduct = async () => {
     await inventoryStore.updateProduct(editForm.value.id, {
       name: editForm.value.name,
       buyPrice: editForm.value.buyPrice,
-      sellPrice: editForm.value.sellPrice
+      sellPrice: editForm.value.sellPrice,
+      image: editForm.value.image || undefined
     });
     showEditModal.value = false;
   } catch (err: any) {
     alert(err.message);
   }
+};
+
+const handleImageUpload = (event: Event, target: 'add' | 'edit') => {
+  const file = (event.target as HTMLInputElement).files?.[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    const img = new Image();
+    img.onload = () => {
+      const canvas = document.createElement('canvas');
+      const MAX_WIDTH = 300;
+      const MAX_HEIGHT = 300;
+      let width = img.width;
+      let height = img.height;
+
+      if (width > height) {
+        if (width > MAX_WIDTH) {
+          height *= MAX_WIDTH / width;
+          width = MAX_WIDTH;
+        }
+      } else {
+        if (height > MAX_HEIGHT) {
+          width *= MAX_HEIGHT / height;
+          height = MAX_HEIGHT;
+        }
+      }
+
+      canvas.width = width;
+      canvas.height = height;
+      const ctx = canvas.getContext('2d');
+      ctx?.drawImage(img, 0, 0, width, height);
+
+      // Compress to jpeg with 0.7 quality to keep it under 15-20KB
+      const base64 = canvas.toDataURL('image/jpeg', 0.7);
+      
+      if (target === 'add') {
+        productForm.value.image = base64;
+      } else {
+        editForm.value.image = base64;
+      }
+    };
+    img.src = e.target?.result as string;
+  };
+  reader.readAsDataURL(file);
 };
 </script>
 
@@ -162,62 +212,79 @@ const handleEditProduct = async () => {
       </div>
     </div>
 
-    <!-- Table -->
-    <div class="card overflow-x-auto">
-      <table class="w-full text-left border-collapse">
-        <thead>
-          <tr class="bg-dark-900/50 text-customText-muted text-xs uppercase tracking-wider">
-            <th class="px-6 py-4 font-semibold">Producto</th>
-            <th class="px-6 py-4 font-semibold">Categoría</th>
-            <th class="px-6 py-4 font-semibold">Stock</th>
-            <th class="px-6 py-4 font-semibold">Precio Venta</th>
-            <th class="px-6 py-4 font-semibold text-right">Acciones</th>
-          </tr>
-        </thead>
-        <tbody class="divide-y divide-dark-700">
-          <tr v-for="product in filteredProducts" :key="product.id" class="hover:bg-dark-700/30 transition-colors">
-            <td class="px-6 py-4">
-              <div class="font-medium text-white">{{ product.name }}</div>
-              <div class="text-xs text-customText-muted">{{ product.provider || 'Sin proveedor' }}</div>
-            </td>
-            <td class="px-6 py-4">
-              <span class="px-2 py-1 rounded-full bg-dark-700 text-[10px] uppercase font-bold text-customText-muted">
-                {{ product.category }}
-              </span>
-            </td>
-            <td class="px-6 py-4">
-              <div class="flex items-center space-x-2">
-                <span :class="['font-bold', product.stock <= product.minStock ? 'text-red-400' : 'text-white']">
-                  {{ product.stock }}
-                </span>
-                <AlertCircle v-if="product.stock <= product.minStock" class="w-4 h-4 text-red-400" />
-              </div>
-            </td>
-            <td class="px-6 py-4 font-medium text-white">
-              S/ {{ product.sellPrice.toFixed(2) }}
-            </td>
-            <td class="px-6 py-4 text-right">
-              <div class="flex items-center justify-end space-x-2">
-                <button @click="openSaleModal(product)" class="p-2 rounded-lg bg-green-500/10 text-green-400 hover:bg-green-500 hover:text-white transition-all" title="Registrar Venta">
-                  <ShoppingCart class="w-4 h-4" />
-                </button>
-                <button @click="openRestockModal(product)" class="p-2 rounded-lg bg-accent/10 text-accent hover:bg-accent hover:text-white transition-all" title="Añadir Stock">
-                  <PlusCircle class="w-4 h-4" />
-                </button>
-                <button v-if="authStore.user?.role === 'admin'" @click="openEditModal(product)" class="p-2 rounded-lg bg-blue-500/10 text-blue-400 hover:bg-blue-500 hover:text-white transition-all" title="Editar Producto">
-                  <Edit3 class="w-4 h-4" />
-                </button>
-                <button v-if="authStore.user?.role === 'admin'" @click="handleDelete(product.id)" class="p-2 rounded-lg bg-red-500/10 text-red-400 hover:bg-red-500 hover:text-white transition-all" title="Eliminar">
-                  <Trash2 class="w-4 h-4" />
-                </button>
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <div v-if="filteredProducts.length === 0" class="p-10 text-center text-customText-muted italic">
-        No se encontraron productos.
+    <!-- Card Grid (Responsive) -->
+    <div v-if="filteredProducts.length > 0" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div v-for="product in filteredProducts" :key="product.id" class="card group overflow-hidden flex flex-col justify-between border-dark-700/50 hover:border-accent/40 transition-all duration-300 hover:shadow-xl hover:shadow-accent/5">
+        <!-- Image Area -->
+        <div class="relative aspect-video sm:aspect-square w-full bg-dark-900 flex items-center justify-center border-b border-dark-700/50 overflow-hidden">
+          <img v-if="product.image" :src="product.image" :alt="product.name" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div v-else class="w-full h-full bg-gradient-to-br from-dark-800 to-dark-900 flex flex-col items-center justify-center p-4">
+            <Package class="w-12 h-12 text-dark-700 mb-2 group-hover:text-accent transition-colors" />
+            <span class="text-[10px] text-customText-muted uppercase tracking-widest font-bold">MALA FAMA</span>
+          </div>
+          
+          <!-- Category Badge -->
+          <span class="absolute top-3 left-3 px-2 py-0.5 rounded-lg bg-dark-950/80 backdrop-blur-md border border-dark-700/50 text-[10px] font-bold uppercase tracking-wider text-customText-muted">
+            {{ product.category }}
+          </span>
+
+          <!-- Stock Level Warning Badge -->
+          <span v-if="product.stock <= product.minStock" class="absolute top-3 right-3 px-2 py-0.5 rounded-lg bg-red-500/90 text-white text-[10px] font-bold uppercase tracking-wider flex items-center shadow-lg shadow-red-500/20">
+            <AlertCircle class="w-3 h-3 mr-1" /> Stock Bajo
+          </span>
+        </div>
+
+        <!-- Info Area -->
+        <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+          <div>
+            <h3 class="font-bold text-white text-lg tracking-tight group-hover:text-accent transition-colors truncate">{{ product.name }}</h3>
+            <p class="text-xs text-customText-muted">{{ product.provider || 'Sin proveedor' }}</p>
+          </div>
+          
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-[10px] text-customText-muted uppercase tracking-wider">Precio Venta</p>
+              <p class="text-xl font-bold text-accent">S/ {{ product.sellPrice.toFixed(2) }}</p>
+            </div>
+            <div class="text-right">
+              <p class="text-[10px] text-customText-muted uppercase tracking-wider">Disponibles</p>
+              <p :class="['text-lg font-bold', product.stock <= product.minStock ? 'text-red-400' : 'text-white']">
+                {{ product.stock }} und
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Actions Bar -->
+        <div class="p-4 border-t border-dark-700/50 bg-dark-800/50 flex items-center justify-between gap-2">
+          <!-- Staff & Admin Actions -->
+          <div class="flex items-center space-x-1.5 flex-1">
+            <button @click="openSaleModal(product)" class="flex-1 btn btn-secondary !py-2 bg-green-500/10 border-green-500/20 text-green-400 hover:bg-green-500 hover:text-white transition-all text-xs flex items-center justify-center space-x-1" title="Registrar Venta">
+              <ShoppingCart class="w-3.5 h-3.5" />
+              <span>Venta</span>
+            </button>
+            <button @click="openRestockModal(product)" class="flex-1 btn btn-secondary !py-2 bg-accent/10 border-accent/20 text-accent hover:bg-accent hover:text-white transition-all text-xs flex items-center justify-center space-x-1" title="Añadir Stock">
+              <PlusCircle class="w-3.5 h-3.5" />
+              <span>Stock</span>
+            </button>
+          </div>
+          
+          <!-- Admin Only Actions -->
+          <div v-if="authStore.user?.role === 'admin'" class="flex items-center space-x-1">
+            <button @click="openEditModal(product)" class="p-2 rounded-lg border border-blue-500/20 bg-blue-500/10 text-blue-400 hover:bg-blue-500 hover:text-white transition-all" title="Editar Producto">
+              <Edit3 class="w-3.5 h-3.5" />
+            </button>
+            <button @click="handleDelete(product.id)" class="p-2 rounded-lg border border-red-500/20 bg-red-500/10 text-red-400 hover:bg-red-500 hover:text-white transition-all" title="Eliminar">
+              <Trash2 class="w-3.5 h-3.5" />
+            </button>
+          </div>
+        </div>
       </div>
+    </div>
+    
+    <div v-else class="py-20 text-center text-customText-muted italic card">
+      <Package class="w-16 h-16 mx-auto mb-4 opacity-20" />
+      <p>No se encontraron productos en el inventario.</p>
     </div>
 
     <!-- Add Modal -->
@@ -227,6 +294,31 @@ const handleEditProduct = async () => {
         <h3 class="text-2xl font-bold text-white">Nuevo Producto</h3>
         
         <div class="grid grid-cols-2 gap-4">
+          <div class="col-span-2">
+            <label class="block text-sm font-medium text-customText-muted mb-2">Imagen del Producto</label>
+            <div class="flex items-center space-x-4 mb-2">
+              <div class="w-20 h-20 bg-dark-900 rounded-xl border border-dark-700/50 flex items-center justify-center overflow-hidden flex-shrink-0">
+                <img v-if="productForm.image" :src="productForm.image" alt="Vista Previa" class="w-full h-full object-cover" />
+                <Package v-else class="w-8 h-8 text-dark-700" />
+              </div>
+              <div class="flex-1">
+                <input 
+                  type="file" 
+                  accept="image/*" 
+                  @change="handleImageUpload($event, 'add')" 
+                  class="hidden" 
+                  id="add-image-input" 
+                />
+                <label 
+                  for="add-image-input" 
+                  class="btn btn-secondary text-xs py-2 px-3 inline-flex items-center cursor-pointer hover:bg-dark-700 hover:text-white"
+                >
+                  Subir Imagen
+                </label>
+                <p class="text-[10px] text-customText-muted mt-1">Cámara o archivo (Redimensionado automático)</p>
+              </div>
+            </div>
+          </div>
           <div class="col-span-2">
             <label class="block text-sm font-medium text-customText-muted mb-2">Nombre del Producto</label>
             <input v-model="productForm.name" type="text" class="input-field" placeholder="Ej. Cerveza Pilsen" />
@@ -349,6 +441,31 @@ const handleEditProduct = async () => {
         </h3>
         
         <div class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-customText-muted mb-2">Imagen del Producto</label>
+            <div class="flex items-center space-x-4 mb-2">
+              <div class="w-20 h-20 bg-dark-900 rounded-xl border border-dark-700/50 flex items-center justify-center overflow-hidden flex-shrink-0">
+                <img v-if="editForm.image" :src="editForm.image" alt="Vista Previa" class="w-full h-full object-cover" />
+                <Package v-else class="w-8 h-8 text-dark-700" />
+              </div>
+              <div class="flex-1">
+                <input 
+                  type="file" 
+                  accept="image/*" 
+                  @change="handleImageUpload($event, 'edit')" 
+                  class="hidden" 
+                  id="edit-image-input" 
+                />
+                <label 
+                  for="edit-image-input" 
+                  class="btn btn-secondary text-xs py-2 px-3 inline-flex items-center cursor-pointer hover:bg-dark-700 hover:text-white"
+                >
+                  Cambiar Imagen
+                </label>
+                <p class="text-[10px] text-customText-muted mt-1">Cámara o archivo (Redimensionado automático)</p>
+              </div>
+            </div>
+          </div>
           <div>
             <label class="block text-sm font-medium text-customText-muted mb-2">Nombre del Producto</label>
             <input v-model="editForm.name" type="text" class="input-field" />

@@ -12,6 +12,7 @@ export interface Product {
   buyPrice: number;
   sellPrice: number;
   provider?: string;
+  image?: string;
 }
 
 export const useInventoryStore = defineStore('inventory', () => {
