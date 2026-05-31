@@ -36,8 +36,8 @@ export const useTableStore = defineStore('tables', () => {
   const settings = ref<Settings>({ id: '1', billiardRate: 15, pokerRate: 10 });
   const loading = ref(false);
 
-  async function fetchTables() {
-    loading.value = true;
+  async function fetchTables(silent = false) {
+    if (!silent) loading.value = true;
     try {
       const [tData, sData, rData] = await Promise.all([
         apiService.getAll<Table>('tables'),
@@ -48,7 +48,7 @@ export const useTableStore = defineStore('tables', () => {
       if (sData && sData[0]) settings.value = sData[0];
       rentals.value = rData;
     } finally {
-      loading.value = false;
+      if (!silent) loading.value = false;
     }
   }
 
@@ -61,8 +61,9 @@ export const useTableStore = defineStore('tables', () => {
   }
 
   async function startRental(tableId: string, numPeople?: number, fixedHours?: number) {
+    const rentalId = Date.now().toString();
     const rental: Rental = {
-      id: Date.now().toString(),
+      id: rentalId,
       tableId,
       startTime: new Date().toISOString(),
       endTime: null,
@@ -73,15 +74,19 @@ export const useTableStore = defineStore('tables', () => {
       status: 'active'
     };
 
-    const newRental = await apiService.create<Rental>('rentals', rental);
-    rentals.value.push(newRental);
+    // Optimistic Update
+    rentals.value.push(rental);
+    const table = tables.value.find(t => t.id === tableId);
+    if (table) {
+      table.status = 'occupied';
+      table.currentRentalId = rentalId;
+    }
 
+    const newRental = await apiService.create<Rental>('rentals', rental);
     await apiService.update('tables', tableId, {
       status: 'occupied',
       currentRentalId: newRental.id
     });
-
-    await fetchTables();
   }
 
   async function finishRental(tableId: string, paymentMethod: 'cash' | 'yape' | 'debt', totalAmount: number, clientName?: string) {
@@ -89,8 +94,20 @@ export const useTableStore = defineStore('tables', () => {
     if (!table || !table.currentRentalId) return;
 
     const endTime = new Date().toISOString();
-    
-    await apiService.update('rentals', table.currentRentalId, {
+    const rentalId = table.currentRentalId;
+
+    // Optimistic Update
+    const rental = rentals.value.find(r => r.id === rentalId);
+    if (rental) {
+      rental.endTime = endTime;
+      rental.paymentMethod = paymentMethod;
+      rental.totalAmount = totalAmount;
+      rental.status = 'completed';
+    }
+    table.status = 'available';
+    table.currentRentalId = null;
+
+    await apiService.update('rentals', rentalId, {
       endTime,
       paymentMethod,
       totalAmount,
@@ -121,8 +138,6 @@ export const useTableStore = defineStore('tables', () => {
         description: `Alquiler ${table.name}`
       });
     }
-
-    await fetchTables();
   }
 
   async function addTable(name: string, type: 'billiard' | 'poker') {
@@ -133,13 +148,22 @@ export const useTableStore = defineStore('tables', () => {
       status: 'available',
       currentRentalId: null
     };
+
+    // Optimistic Update
+    tables.value.push(newTable);
+
     const created = await apiService.create<Table>('tables', newTable);
-    tables.value.push(created);
+    const index = tables.value.findIndex(t => t.id === newTable.id);
+    if (index !== -1 && created) {
+      tables.value[index] = created;
+    }
   }
 
   async function deleteTable(id: string) {
-    await apiService.delete('tables', id);
+    // Optimistic Update
     tables.value = tables.value.filter(t => t.id !== id);
+
+    await apiService.delete('tables', id);
   }
 
   return {

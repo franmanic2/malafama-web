@@ -77,8 +77,8 @@ const fixedHours = ref(1);
 
 const handleStart = async () => {
   const hours = isFixedTime.value ? fixedHours.value : undefined;
-  await tableStore.startRental(props.table.id, props.table.type === 'poker' ? numPeople.value : undefined, hours);
   showRentalModal.value = false;
+  await tableStore.startRental(props.table.id, props.table.type === 'poker' ? numPeople.value : undefined, hours);
   isFixedTime.value = false;
   fixedHours.value = 1;
 };
@@ -88,8 +88,8 @@ const handleFinish = async () => {
     alert('Por favor ingresa el nombre del cliente para registrar la deuda.');
     return;
   }
-  await tableStore.finishRental(props.table.id, paymentMethod.value, calculatedCost.value, debtClientName.value);
   showFinishModal.value = false;
+  await tableStore.finishRental(props.table.id, paymentMethod.value, calculatedCost.value, debtClientName.value);
   debtClientName.value = '';
 };
 </script>
